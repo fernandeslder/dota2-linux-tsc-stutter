@@ -1,0 +1,269 @@
+{
+  "run_id": "live-FP2",
+  "config": {
+    "target_fps": 144.0,
+    "k": 2.5,
+    "w_s": 1.0,
+    "floor_ms": 13.88888888888889,
+    "floor_min_ms": 12.0,
+    "floor_target_mult": 2.0,
+    "merge_gap_ms": 100.0,
+    "k_low": 2.0,
+    "floor_low_ms": 10.416666666666668,
+    "floor_low_min_ms": 8.0,
+    "floor_low_target_mult": 1.5,
+    "target_ms": 6.944444444444445
+  },
+  "hitch_definition": {
+    "rule": "frametime_ms > K * rolling_median(+-W, excl. centre) AND frametime_ms > FLOOR",
+    "K": 2.5,
+    "W_s": 1.0,
+    "FLOOR_ms": 13.88888888888889,
+    "merge_gap_ms": 100.0,
+    "target_fps": 144.0,
+    "low_tier": {
+      "K": 2.0,
+      "FLOOR_ms": 10.416666666666668
+    }
+  },
+  "window": {
+    "t_start": 1791518077.989736,
+    "warmup_end": 1791518077.987,
+    "t_end": 1791519278.506433,
+    "duration_s": 616.4083127975464,
+    "n_frames": 72504,
+    "warmup_source": "mark"
+  },
+  "hitches": {
+    "count": 19,
+    "per_min": 1.8494234687169484,
+    "worst_ms": 30.9921,
+    "worst_t": 1791518416.630554,
+    "median_ms": 23.3376,
+    "low_count": 526,
+    "low_per_min": 51.1998286602692,
+    "isolated_count": 5,
+    "sparse_per_min": 0.48669038650446006
+  },
+  "frametime": {
+    "p50_ms": 7.43488,
+    "p95_ms": 13.4236,
+    "p99_ms": 14.8888,
+    "fps_1pct_low": 62.58460883093657,
+    "fps_0.1pct_low": 51.48347881059907,
+    "mean_fps": 117.65501307590587,
+    "frame_drop_frac": 0.03063279267350767,
+    "n_frames": 72504
+  },
+  "data_quality": {
+    "rows_total": 85841,
+    "rows_kept": 85841,
+    "rows_rejected": 0,
+    "reasons": {
+      "nonfinite": 0,
+      "nonpositive": 0,
+      "over_max": 0
+    },
+    "max_plausible_ms": 10000.0,
+    "rejected_examples": [],
+    "rows_unparseable": 0
+  },
+  "intervals": {
+    "count": 18,
+    "min_s": 0.1148989200592041,
+    "max_s": 132.9864628314972,
+    "p50_s": 21.060778617858887,
+    "p90_s": 92.51765825748446,
+    "p95_s": 119.05296719074246,
+    "p99_s": 130.19976370334624,
+    "mean_s": 33.78269350528717,
+    "cv": 1.1365054935995142,
+    "hist": {
+      "edges_s": [
+        0.1148989200592041,
+        7.496652470694648,
+        14.878406021330091,
+        22.260159571965534,
+        29.64191312260098,
+        37.02366667323642,
+        44.405420223871864,
+        51.78717377450731,
+        59.168927325142754,
+        66.5506808757782,
+        73.93243442641364,
+        81.31418797704909,
+        88.69594152768452,
+        96.07769507831998,
+        103.45944862895541,
+        110.84120217959087,
+        118.2229557302263,
+        125.60470928086174,
+        132.9864628314972
+      ],
+      "counts": [
+        5,
+        3,
+        1,
+        1,
+        3,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    }
+  },
+  "periodicity": {
+    "n_events": 19,
+    "window_s": 1200.5194330215454,
+    "window_min": 20.008657217025757,
+    "sparse_assessable": true,
+    "kind": "aperiodic",
+    "steady": {
+      "period_s": 5.0025,
+      "spectral_peak_s": 0.6589462129527992,
+      "period_source": "interval",
+      "power": 166.61299156800953,
+      "p_value": 0.1371571072319202,
+      "period_err_s": 2.865561674192669,
+      "fraction_explained": 0.21052631578947367,
+      "significant": false,
+      "n_events": 19
+    },
+    "sparse": {
+      "period_s": 42.8311071395874,
+      "spectral_peak_s": 33.35,
+      "period_source": "interval",
+      "power": 70.29543103749737,
+      "p_value": 0.48129675810473815,
+      "period_err_s": 12.4912072992379,
+      "fraction_explained": 0.3157894736842105,
+      "significant": false,
+      "n_events": 19,
+      "assessable": true
+    },
+    "sparse_residual": null,
+    "interval_hist": {
+      "edges_s": [
+        0.1148989200592041,
+        7.496652470694648,
+        14.878406021330091,
+        22.260159571965534,
+        29.64191312260098,
+        37.02366667323642,
+        44.405420223871864,
+        51.78717377450731,
+        59.168927325142754,
+        66.5506808757782,
+        73.93243442641364,
+        81.31418797704909,
+        88.69594152768452,
+        96.07769507831998,
+        103.45944862895541,
+        110.84120217959087,
+        118.2229557302263,
+        125.60470928086174,
+        132.9864628314972
+      ],
+      "counts": [
+        5,
+        3,
+        1,
+        1,
+        3,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "mode_s": 3.805775695376926,
+      "median_s": 21.060778617858887,
+      "quantiles_s": {
+        "10": 1.17798330783844,
+        "25": 7.245959579944611,
+        "50": 21.060778617858887,
+        "75": 40.611619651317596,
+        "90": 92.51765825748446
+      }
+    },
+    "autocorr_peak": {
+      "period_s": 10.0,
+      "power": 0.10384495484142908
+    },
+    "lombscargle_peak": {
+      "period_s": 35.23187604946272,
+      "power": 0.44630617857853516
+    },
+    "warnings": []
+  },
+  "sparse": {
+    "assessment": "irregular",
+    "label": "irregular",
+    "n_primary_hitches": 19,
+    "n_sparse_candidates": 11,
+    "severity_min_ms": 20.833333333333336,
+    "residual_applied": false,
+    "steady_period_s": 5.0025,
+    "residual_period_s": null,
+    "window_s": 1200.5194330215454,
+    "window_min": 20.008657217025757,
+    "rate_per_min": 0.5497620295398876,
+    "rate_ci95_per_min": [
+      0.24989183160903983,
+      0.8996105937925434
+    ],
+    "rate_ci_method": "poisson-bootstrap",
+    "n_boot": 2000,
+    "period_s": null,
+    "interval_quantiles_s": {
+      "count": 10,
+      "min_s": 1.398162841796875,
+      "p10_s": 3.198208975791931,
+      "p25_s": 7.448263347148895,
+      "p50_s": 25.945019602775574,
+      "p75_s": 108.01088678836823,
+      "p90_s": 133.3261655330658,
+      "max_s": 136.38348984718323,
+      "mean_s": 52.3127849817276,
+      "cv": 1.0358547024464801
+    },
+    "sparse_band_intervals_s": [
+      54.689,
+      33.953
+    ],
+    "mode_s": 34.5,
+    "mode_cluster": {
+      "n": 1,
+      "cv": 0.0,
+      "fraction": 0.5
+    },
+    "cv_max": 0.15,
+    "mode_tol_frac": 0.25,
+    "interval_band_s": [
+      30.0,
+      90.0
+    ],
+    "caveats": [
+      "only 2 interval(s) in the [20, 100] s band (<5): regularity cannot be established"
+    ]
+  },
+  "warnings": []
+}

@@ -1,0 +1,64 @@
+#!/bin/sh
+# stutter -- Dota 2 stutter detector, single entry point.
+#
+#   stutter collect start|stop|mark|status ...    data collection (detector/collect)
+#   stutter quiesce on|off|status ...             record/stop/restore background load
+#   stutter preflight [--json] ...                read-only go/no-go checks
+#   stutter launchopts [--get|--set|--build] ...  read/write Dota 2 Steam launch options
+#   stutter trial run|cleanup ...                 orchestration-friendly trial wrapper
+#   stutter detect|report|compare|selftest|fixed|synth ...   analysis (detector/analyze)
+#
+# POSIX sh only (the login shell is fish; never rely on it).
+set -eu
+
+resolve() {
+    p=$1
+    while [ -L "$p" ]; do
+        t=$(readlink "$p")
+        case "$t" in
+            /*) p=$t ;;
+            *)  p=$(dirname "$p")/$t ;;
+        esac
+    done
+    cd "$(dirname "$p")" && pwd
+}
+BIN_DIR=$(resolve "$0")
+ROOT=$(cd "$BIN_DIR/.." && pwd)
+export PYTHONPATH="$ROOT${PYTHONPATH:+:$PYTHONPATH}"
+PY=${STUTTER_PYTHON:-${PYTHON:-python3}}
+
+usage() {
+    cat >&2 <<USAGE
+usage: stutter <command> [options]
+
+  collect start|stop|mark|status   data collection
+  quiesce on|off|status            record/stop/restore background load
+  preflight [--json]               read-only go/no-go checks
+  launchopts [--get|--set S|--restore F|--build --base S [--mangohud]]
+                                   read/write Dota 2 Steam launch options
+  trial run|cleanup ...            orchestration-friendly trial wrapper
+  detect <run-dir>                 hitch detection
+  report <run-dir>                 report + plots
+  compare <runA...> -- <runB...>   A/B verdict
+  selftest                         validation
+  fixed <run-dir...>               check against the "fixed" definition
+  synth                            synthetic run generator
+
+Run 'stutter collect start --help' for collector options.
+Run 'stutter trial run --help' for trial options.
+USAGE
+}
+
+cmd=${1:-}
+if [ $# -gt 0 ]; then shift; fi
+
+case "$cmd" in
+    collect)  exec "$PY" -m detector.collect.cli "$@" ;;
+    quiesce)  exec "$PY" -m detector.collect.quiesce "$@" ;;
+    preflight|launchopts|trial)
+              exec "$PY" -m detector.trial.cli "$cmd" "$@" ;;
+    detect|report|compare|selftest|fixed|synth)
+              exec "$PY" -m detector.analyze "$cmd" "$@" ;;
+    ""|-h|--help|help) usage; exit 0 ;;
+    *) echo "stutter: unknown command '$cmd'" >&2; usage; exit 2 ;;
+esac

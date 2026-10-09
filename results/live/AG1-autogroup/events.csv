@@ -1,0 +1,23 @@
+t_epoch,label,detail
+1791515314.811607,run_start,label=AG1-autogroup profile=lite
+1791515314.902506,collectors_start,pid=3940543 profile=lite
+1791515314.907370,offcpu_start,mode=native hz=100.0 pid=0
+1791515319.925640,game_detected,pid=3940722
+1791515408.226208,match_loaded,process=dota2 pids=[3940722] frames=12
+1791515428.226615,warmup_end,warmup_s=20.0
+1791515430.131685,phase:ag_on1,kernel.sched_autogroup_enabled=1
+1791515488.448015,heartbeat,frames=19361 elapsed_min=1.0
+1791515540.206355,phase:ag_off1,kernel.sched_autogroup_enabled=0
+1791515548.705222,heartbeat,frames=27670 elapsed_min=2.0
+1791515608.952887,heartbeat,frames=35972 elapsed_min=3.0
+1791515650.288477,phase:ag_on2,kernel.sched_autogroup_enabled=1
+1791515669.219290,heartbeat,frames=44465 elapsed_min=4.0
+1791515729.477846,heartbeat,frames=52402 elapsed_min=5.0
+1791515760.368865,phase:ag_off2,kernel.sched_autogroup_enabled=0
+1791515789.708868,heartbeat,frames=60839 elapsed_min=6.0
+1791515849.962082,heartbeat,frames=69341 elapsed_min=7.0
+1791515870.427759,phase:end,
+1791515908.595273,window_end,minutes=8.0
+1791515908.595507,stop_requested,signal 15
+1791515908.633505,collectors_stop,pid=3940543
+1791515908.795735,window_end,collect stop

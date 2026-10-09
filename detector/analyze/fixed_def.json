@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "provisional": false,
+  "note": "Derived from 7 untouched live-spectate baseline runs (docs/FIXED-DEFINITION.md): 17-55 hitches/min, worst 1.7-3.3 s, 0.1% low 0.8-1.6 fps; vs fixed runs 1.8-3.0 hitches/min, worst <=33 ms, 0.1% low 46-54 fps.",
+  "criteria": {
+    "no_steady_periodic": {
+      "enabled": true,
+      "max_period_s": 10.0,
+      "p_threshold": 0.01,
+      "description": "No significant periodic component at any period < 10 s (spec: steady rhythm < 10 s)."
+    },
+    "sparse_rate_per_min_max": {
+      "enabled": false,
+      "value": 1.0,
+      "absolute_cap": 2.0,
+      "description": "Sparse hitch rate must be <= value, and never above absolute_cap, per run."
+    },
+    "fps_0p1pct_low_min": {
+      "enabled": true,
+      "value": 30.0,
+      "description": "0.1% low >= 30 fps (baseline 0.8-1.6 fps; fixed runs 46-54 fps in heavy teamfights)."
+    },
+    "min_run_duration_min": {
+      "enabled": true,
+      "value": 5.0,
+      "description": "Every run must be >= 5 min after warm-up (sparse verdicts need >= 5 min)."
+    },
+    "min_consecutive_runs": {
+      "enabled": true,
+      "value": 3,
+      "description": "The 'fixed' claim requires this many consecutive runs, including one 15-20 min."
+    },
+    "hitches_per_min_max": {
+      "enabled": true,
+      "value": 6.0,
+      "description": "Primary-tier hitches/min <= value (baseline >= 17/min; fixed runs <= 3.0/min in heavy late-game scenes)."
+    },
+    "worst_hitch_ms_max": {
+      "enabled": true,
+      "value": 100.0,
+      "description": "No hitch above 100 ms (baseline worst 1.7-3.3 s; fixed runs <= 33 ms)."
+    },
+    "longest_run_min": {
+      "enabled": true,
+      "value": 15.0,
+      "description": "At least one of the consecutive runs must be 15-20 min after warm-up."
+    }
+  }
+}

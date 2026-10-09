@@ -1,0 +1,83 @@
+{
+  "run_id": "live-smoke",
+  "config": {
+    "target_fps": 144.0,
+    "k": 2.5,
+    "w_s": 1.0,
+    "floor_ms": 13.88888888888889,
+    "floor_min_ms": 12.0,
+    "floor_target_mult": 2.0,
+    "merge_gap_ms": 100.0,
+    "k_low": 2.0,
+    "floor_low_ms": 10.416666666666668,
+    "floor_low_min_ms": 8.0,
+    "floor_low_target_mult": 1.5,
+    "target_ms": 6.944444444444445
+  },
+  "hitch_definition": {
+    "rule": "frametime_ms > K * rolling_median(+-W, excl. centre) AND frametime_ms > FLOOR",
+    "K": 2.5,
+    "W_s": 1.0,
+    "FLOOR_ms": 13.88888888888889,
+    "merge_gap_ms": 100.0,
+    "target_fps": 144.0,
+    "low_tier": {
+      "K": 2.0,
+      "FLOOR_ms": 10.416666666666668
+    }
+  },
+  "window": {
+    "t_start": NaN,
+    "warmup_end": 1791499047.761397,
+    "t_end": 1791499058.187794,
+    "duration_s": 0.0,
+    "n_frames": 0,
+    "warmup_source": "mark"
+  },
+  "hitches": {
+    "count": 0,
+    "per_min": NaN,
+    "worst_ms": NaN,
+    "worst_t": NaN,
+    "median_ms": NaN,
+    "low_count": 0,
+    "low_per_min": NaN,
+    "isolated_count": 0,
+    "sparse_per_min": NaN
+  },
+  "frametime": {
+    "p50_ms": NaN,
+    "p95_ms": NaN,
+    "p99_ms": NaN,
+    "fps_1pct_low": NaN,
+    "fps_0.1pct_low": NaN,
+    "mean_fps": NaN,
+    "frame_drop_frac": NaN,
+    "n_frames": 0
+  },
+  "intervals": {
+    "count": 0,
+    "hist": null
+  },
+  "periodicity": {
+    "n_events": 0,
+    "window_s": 10.42639708518982,
+    "window_min": 0.17377328475316364,
+    "sparse_assessable": false,
+    "kind": "insufficient",
+    "steady": null,
+    "sparse": null,
+    "sparse_residual": null,
+    "interval_hist": null,
+    "autocorr_peak": null,
+    "lombscargle_peak": null,
+    "warnings": [
+      "post-warm-up window 0.2 min < 5 min: sparse (30-90 s) periodicity cannot be assessed",
+      "only 0 hitch event(s): periodic verdict unreliable"
+    ]
+  },
+  "warnings": [
+    "post-warm-up window 0.2 min < 5 min: sparse (30-90 s) periodicity cannot be assessed",
+    "only 0 hitch event(s): periodic verdict unreliable"
+  ]
+}

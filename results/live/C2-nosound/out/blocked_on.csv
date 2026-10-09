@@ -1,0 +1,31 @@
+thread,state,syscall,wchan,hitches,hitches_frac,coverage_mean,coverage_p50,total_s,threads_mean
+AsyncIOService/,S,futex,__futex_wait,58,1.0000,1.0000,1.0000,12.0511,3.00
+dota2,S,futex,__futex_wait,58,1.0000,1.0000,1.0000,12.0511,5.00
+[vkcf] Analysis,S,futex,__futex_wait,58,1.0000,1.0000,1.0000,12.0511,1.00
+[vkrt] Analysis,S,futex,__futex_wait,58,1.0000,1.0000,1.0000,12.0511,1.00
+Async Pipeline,S,futex,__futex_wait,58,1.0000,1.0000,1.0000,12.0511,31.00
+VmaDefragThread,S,futex,__futex_wait,58,1.0000,1.0000,1.0000,12.0511,1.00
+AsyncTextureHoo,S,futex,__futex_wait,58,1.0000,1.0000,1.0000,12.0511,1.00
+mangohud-hwinfo,S,futex,__futex_wait,58,1.0000,1.0000,1.0000,12.0511,1.00
+CSteamAudioReve,S,futex,__futex_wait,58,1.0000,1.0000,1.0000,12.0511,1.00
+CSteamAudioPart,S,futex,__futex_wait,58,1.0000,1.0000,1.0000,12.0511,1.00
+V8 DefaultWorke,S,futex,__futex_wait,58,1.0000,1.0000,1.0000,12.0511,1.00
+Panorama Image,S,futex,__futex_wait,58,1.0000,1.0000,1.0000,12.0511,1.00
+SaveJob/0,S,futex,__futex_wait,58,1.0000,1.0000,1.0000,12.0511,1.00
+Video Decode Th,S,futex,__futex_wait,58,1.0000,1.0000,1.0000,12.0511,5.00
+CFileWriterThre,S,futex,__futex_wait,58,1.0000,1.0000,1.0000,12.0511,1.00
+SteamEngineWatc,S,futex,__futex_wait,58,1.0000,1.0000,1.0000,12.0511,1.00
+CJobMgr::m_Work,S,futex,__futex_wait,58,1.0000,1.0000,1.0000,12.0511,2.00
+IPC:CSteamEngin,S,futex,__futex_wait,58,1.0000,1.0000,1.0000,12.0511,1.00
+cuda0000a40002a,S,poll,do_sys_poll,58,1.0000,1.0000,1.0000,12.0511,1.00
+dota2,S,epoll_wait,do_epoll_wait,58,1.0000,1.0000,1.0000,12.0511,2.00
+IOCP Thread 0,S,epoll_wait,do_epoll_wait,58,1.0000,1.0000,1.0000,12.0511,1.00
+dota2,S,clock_nanosleep,hrtimer_nanosleep,58,1.0000,0.9994,1.0000,12.0201,1.00
+CHTTPClientThre,S,futex,__futex_wait,58,1.0000,0.9994,1.0000,12.0411,1.00
+CHTTPCacheFileT,S,futex,__futex_wait,58,1.0000,0.9986,1.0000,12.0309,1.00
+IPC:CSteamEngin,S,epoll_wait,do_epoll_wait,58,1.0000,0.9961,1.0000,12.0208,1.00
+CNet Encrypt:0,S,futex,__futex_wait,58,1.0000,0.9958,1.0000,12.0311,1.00
+VKRenderThread,S,futex,__futex_wait,58,1.0000,0.9929,1.0000,11.9950,8.00
+[vkps] Update,S,futex,__futex_wait,58,1.0000,0.9917,1.0000,11.9510,1.00
+dota2,S,poll,do_sys_poll,58,1.0000,0.9769,1.0000,11.8440,1.00
+mangohud-nvidia,S,clock_nanosleep,hrtimer_nanosleep,58,1.0000,0.9222,0.9276,11.2674,1.00

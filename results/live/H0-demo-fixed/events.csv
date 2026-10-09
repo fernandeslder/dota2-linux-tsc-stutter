@@ -1,0 +1,16 @@
+t_epoch,label,detail
+1791521445.802222,run_start,label=H0-demo-fixed profile=lite
+1791521445.899741,collectors_start,pid=4022544 profile=lite
+1791521445.905071,offcpu_start,mode=native hz=100.0 pid=0
+1791521450.923004,game_detected,pid=4022704
+1791521534.650471,match_loaded,process=dota2 pids=[4022704] frames=17
+1791521554.650837,warmup_end,warmup_s=20.0
+1791521615.152145,heartbeat,frames=19025 elapsed_min=1.0
+1791521675.605832,heartbeat,frames=27609 elapsed_min=2.0
+1791521736.083403,heartbeat,frames=36197 elapsed_min=3.0
+1791521796.560615,heartbeat,frames=44821 elapsed_min=4.0
+1791521857.026340,heartbeat,frames=53411 elapsed_min=5.0
+1791521914.828717,window_end,minutes=6.0
+1791521914.828960,stop_requested,signal 15
+1791521914.866048,collectors_stop,pid=4022544
+1791521915.029169,window_end,collect stop

@@ -1,0 +1,16 @@
+t_epoch,label,detail
+1791523964.487356,run_start,label=P2-proton-fixed profile=lite
+1791523964.592440,collectors_start,pid=4088386 profile=lite
+1791523964.597277,offcpu_start,mode=native hz=100.0 pid=0
+1791523974.631608,game_detected,pid=4088861
+1791524068.110391,match_loaded,process=dota2.exe pids=[4088861] frames=10
+1791524088.110714,warmup_end,warmup_s=20.0
+1791524148.200301,heartbeat,frames=19708 elapsed_min=1.0
+1791524208.309081,heartbeat,frames=28282 elapsed_min=2.0
+1791524268.403779,heartbeat,frames=36814 elapsed_min=3.0
+1791524328.477458,heartbeat,frames=45381 elapsed_min=4.0
+1791524388.575308,heartbeat,frames=53886 elapsed_min=5.0
+1791524448.193819,window_end,minutes=6.0
+1791524448.194127,stop_requested,signal 15
+1791524448.244497,collectors_stop,pid=4088386
+1791524448.394343,window_end,collect stop

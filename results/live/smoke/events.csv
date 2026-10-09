@@ -1,0 +1,10 @@
+t_epoch,label,detail
+1791498787.372489,run_start,label=smoke profile=full
+1791498787.468171,collectors_start,pid=3573054 profile=full
+1791498817.562196,game_detected,pid=3573803
+1791499027.761065,match_loaded,process=dota2 pids=[3573803] frames=11
+1791499047.761397,warmup_end,warmup_s=20.0
+1791499058.187794,window_end,aborted: MangoHud frames stopped for >10s (last count 629)
+1791499058.187989,stop_requested,signal 15
+1791499058.200377,collectors_stop,pid=3573054
+1791499058.388289,window_end,collect stop

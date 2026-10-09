@@ -1,0 +1,11 @@
+t_epoch,label,detail
+1791507370.618075,run_start,label=P1-proton-demo profile=full
+1791507370.722085,collectors_start,pid=3804924 profile=full
+1791507370.727894,offcpu_start,mode=native hz=100.0 pid=0
+1791507491.503776,game_detected,pid=3807663
+1791507912.274609,match_loaded,process=dota2.exe pids=[3807663] frames=31
+1791507932.275846,warmup_end,warmup_s=20.0
+1791507980.851367,window_end,aborted: MangoHud frames stopped for >10s (last count 35209)
+1791507980.851853,stop_requested,signal 15
+1791507980.913398,collectors_stop,pid=3804924
+1791507981.052016,window_end,collect stop

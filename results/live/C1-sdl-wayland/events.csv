@@ -1,0 +1,16 @@
+t_epoch,label,detail
+1791505656.417670,run_start,label=C1-sdl-wayland profile=full
+1791505656.520660,collectors_start,pid=3772332 profile=full
+1791505656.527677,offcpu_start,mode=native hz=100.0 pid=0
+1791505661.566670,game_detected,pid=3772523
+1791505787.099922,match_loaded,process=dota2 pids=[3772523] frames=12
+1791505807.100335,warmup_end,warmup_s=20.0
+1791505867.535920,heartbeat,frames=17045 elapsed_min=1.0
+1791505928.035222,heartbeat,frames=23307 elapsed_min=2.0
+1791505988.516278,heartbeat,frames=29670 elapsed_min=3.0
+1791506048.933014,heartbeat,frames=34877 elapsed_min=4.0
+1791506109.109443,heartbeat,frames=38080 elapsed_min=5.0
+1791506167.196290,window_end,minutes=6.0
+1791506167.196528,stop_requested,signal 15
+1791506167.241796,collectors_stop,pid=3772332
+1791506167.396779,window_end,collect stop

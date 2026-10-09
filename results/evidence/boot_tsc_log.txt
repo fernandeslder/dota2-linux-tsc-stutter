@@ -1,0 +1,13 @@
+# kernel log excerpt of the boot (journalctl -k -b), hostname removed
+Oct 07 14:59:28 kernel: tsc: Fast TSC calibration using PIT
+Oct 07 14:59:28 kernel: tsc: Detected 2495.282 MHz processor
+Oct 07 14:59:28 kernel: clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x23f7d0dcb9c, max_idle_ns: 440795235307 ns
+Oct 07 14:59:28 kernel: TSC synchronization [CPU#0 -> CPU#2]:
+Oct 07 14:59:28 kernel: Measured 7361475193 cycles TSC warp between CPUs, turning off TSC clock.
+Oct 07 14:59:28 kernel: tsc: Marking TSC unstable due to check_tsc_sync_source failed
+Oct 07 14:59:28 kernel: clocksource: Switched to clocksource hpet
+Oct 07 14:59:28 kernel: Unstable clock detected, switching default tracing clock to "global"
+Oct 07 14:59:38 kernel: kvm_amd: TSC scaling supported
+Oct 09 00:20:44 kernel: msr: Write to unrecognized MSR 0x10 by tsc_resync (pid: 3948350).
+
+# current clocksource: hpet; available: hpet acpi_pm 

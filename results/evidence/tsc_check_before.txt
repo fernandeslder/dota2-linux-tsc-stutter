@@ -1,0 +1,34 @@
+# real output of tools/tsc_check.c before the fix (captured 2026-10-09 ~00:25, as printed during the session)
+TSC rate (measured on cpu1): 2495.314 MHz
+cpu0  tsc_offset_s=+19.364200
+cpu1  tsc_offset_s=+22.314319
+cpu2  tsc_offset_s=+22.314319
+cpu3  tsc_offset_s=+22.314319
+cpu4  tsc_offset_s=+22.314319
+cpu5  tsc_offset_s=+22.314320
+cpu6  tsc_offset_s=+22.314319
+cpu7  tsc_offset_s=+22.314319
+cpu8  tsc_offset_s=+22.314320
+cpu9  tsc_offset_s=+22.314319
+cpu10 tsc_offset_s=+22.314319
+cpu11 tsc_offset_s=+22.314319
+cpu12 tsc_offset_s=+22.314319
+cpu13 tsc_offset_s=+22.314319
+cpu14 tsc_offset_s=+22.314319
+cpu15 tsc_offset_s=+22.314319
+cpu16 tsc_offset_s=+22.314319
+cpu17 tsc_offset_s=+22.314319
+cpu18 tsc_offset_s=+22.314319
+cpu19 tsc_offset_s=+22.314319
+cpu20 tsc_offset_s=+22.314319
+cpu21 tsc_offset_s=+22.314319
+cpu22 tsc_offset_s=+22.314319
+cpu23 tsc_offset_s=+22.314320
+cpu24 tsc_offset_s=+22.314319
+cpu25 tsc_offset_s=+22.314319
+cpu26 tsc_offset_s=+22.314320
+cpu27 tsc_offset_s=+22.314319
+cpu28 tsc_offset_s=+22.314319
+cpu29 tsc_offset_s=+22.314319
+cpu30 tsc_offset_s=+22.314320
+cpu31 tsc_offset_s=+22.314319

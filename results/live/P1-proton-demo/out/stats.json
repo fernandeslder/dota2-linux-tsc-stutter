@@ -1,0 +1,234 @@
+{
+  "run_id": "live-P1-proton-demo",
+  "config": {
+    "target_fps": 144.0,
+    "k": 2.5,
+    "w_s": 1.0,
+    "floor_ms": 13.88888888888889,
+    "floor_min_ms": 12.0,
+    "floor_target_mult": 2.0,
+    "merge_gap_ms": 100.0,
+    "k_low": 2.0,
+    "floor_low_ms": 10.416666666666668,
+    "floor_low_min_ms": 8.0,
+    "floor_low_target_mult": 1.5,
+    "target_ms": 6.944444444444445
+  },
+  "hitch_definition": {
+    "rule": "frametime_ms > K * rolling_median(+-W, excl. centre) AND frametime_ms > FLOOR",
+    "K": 2.5,
+    "W_s": 1.0,
+    "FLOOR_ms": 13.88888888888889,
+    "merge_gap_ms": 100.0,
+    "target_fps": 144.0,
+    "low_tier": {
+      "K": 2.0,
+      "FLOOR_ms": 10.416666666666668
+    }
+  },
+  "window": {
+    "t_start": 1791507932.282273,
+    "warmup_end": 1791507932.275846,
+    "t_end": 1791507980.851367,
+    "duration_s": 57.11009740829468,
+    "n_frames": 7808,
+    "warmup_source": "mark"
+  },
+  "hitches": {
+    "count": 10,
+    "per_min": 10.506023054214857,
+    "worst_ms": 1211.03,
+    "worst_t": 1791507980.516508,
+    "median_ms": 54.048950000000005,
+    "low_count": 7,
+    "low_per_min": 7.3542161379504,
+    "isolated_count": 0,
+    "sparse_per_min": 0.0
+  },
+  "frametime": {
+    "p50_ms": 7.0686,
+    "p95_ms": 10.31728,
+    "p99_ms": 11.950116000000001,
+    "fps_1pct_low": 24.69265227622651,
+    "fps_0.1pct_low": 3.533206532439561,
+    "mean_fps": 136.76913125091005,
+    "frame_drop_frac": 0.0021772540983606556,
+    "n_frames": 7808
+  },
+  "data_quality": {
+    "rows_total": 36508,
+    "rows_kept": 36508,
+    "rows_rejected": 0,
+    "reasons": {
+      "nonfinite": 0,
+      "nonpositive": 0,
+      "over_max": 0
+    },
+    "max_plausible_ms": 10000.0,
+    "rejected_examples": [],
+    "rows_unparseable": 0
+  },
+  "intervals": {
+    "count": 9,
+    "min_s": 0.21583795547485352,
+    "max_s": 10.683659076690674,
+    "p50_s": 3.3664700984954834,
+    "p90_s": 8.599399089813232,
+    "p95_s": 9.641529083251953,
+    "p99_s": 10.47523307800293,
+    "mean_s": 4.941113339530097,
+    "cv": 0.6370581344832711,
+    "hist": {
+      "edges_s": [
+        0.21583795547485352,
+        1.3789291911655002,
+        2.542020426856147,
+        3.7051116625467935,
+        4.86820289823744,
+        6.031294133928087,
+        7.194385369618733,
+        8.35747660530938,
+        9.520567841000027,
+        10.683659076690674
+      ],
+      "counts": [
+        1,
+        1,
+        3,
+        0,
+        1,
+        0,
+        2,
+        0,
+        1
+      ]
+    }
+  },
+  "periodicity": {
+    "n_events": 10,
+    "window_s": 48.57552099227905,
+    "window_min": 0.8095920165379842,
+    "sparse_assessable": false,
+    "kind": "aperiodic",
+    "steady": {
+      "period_s": 3.471428571428571,
+      "spectral_peak_s": 3.471428571428571,
+      "period_source": "interval",
+      "power": 44.780579188832824,
+      "p_value": 0.5586034912718204,
+      "period_err_s": 1.9909421850578037,
+      "fraction_explained": 0.5,
+      "significant": false,
+      "n_events": 10
+    },
+    "sparse": {
+      "period_s": 48.6,
+      "spectral_peak_s": 48.6,
+      "period_source": "spectral",
+      "power": 2.7917028535627435,
+      "p_value": 0.800498753117207,
+      "period_err_s": 3.684397019027652,
+      "fraction_explained": 0.3,
+      "significant": false,
+      "n_events": 10,
+      "assessable": false
+    },
+    "sparse_residual": null,
+    "interval_hist": {
+      "edges_s": [
+        0.21583795547485352,
+        1.3789291911655002,
+        2.542020426856147,
+        3.7051116625467935,
+        4.86820289823744,
+        6.031294133928087,
+        7.194385369618733,
+        8.35747660530938,
+        9.520567841000027,
+        10.683659076690674
+      ],
+      "counts": [
+        1,
+        1,
+        3,
+        0,
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "mode_s": 3.1235660447014704,
+      "median_s": 3.3664700984954834,
+      "quantiles_s": {
+        "10": 1.8964707374572756,
+        "25": 3.1057209968566895,
+        "50": 3.3664700984954834,
+        "75": 7.555850982666016,
+        "90": 8.599399089813232
+      }
+    },
+    "autocorr_peak": {
+      "period_s": 3.1,
+      "power": 0.1831932773109244
+    },
+    "lombscargle_peak": {
+      "period_s": 1.055132141871177,
+      "power": 0.6000633761740812
+    },
+    "warnings": [
+      "post-warm-up window 0.8 min < 5 min: sparse (30-90 s) periodicity cannot be assessed"
+    ]
+  },
+  "sparse": {
+    "assessment": "none",
+    "label": "none",
+    "n_primary_hitches": 10,
+    "n_sparse_candidates": 9,
+    "severity_min_ms": 20.833333333333336,
+    "residual_applied": false,
+    "steady_period_s": 3.471428571428571,
+    "residual_period_s": null,
+    "window_s": 48.57552099227905,
+    "window_min": 0.8095920165379842,
+    "rate_per_min": 11.116710412345995,
+    "rate_ci95_per_min": [
+      4.940760183264887,
+      18.527850687243326
+    ],
+    "rate_ci_method": "poisson-bootstrap",
+    "n_boot": 2000,
+    "period_s": null,
+    "interval_quantiles_s": {
+      "count": 8,
+      "min_s": 2.316628932952881,
+      "p10_s": 2.868993377685547,
+      "p25_s": 3.121654748916626,
+      "p50_s": 4.693511009216309,
+      "p75_s": 7.68647176027298,
+      "p90_s": 8.859931588172913,
+      "max_s": 10.683659076690674,
+      "mean_s": 5.531772762537003,
+      "cv": 0.5115342236670171
+    },
+    "sparse_band_intervals_s": [],
+    "mode_s": null,
+    "mode_cluster": {
+      "n": 0,
+      "cv": null,
+      "fraction": null
+    },
+    "cv_max": 0.15,
+    "mode_tol_frac": 0.25,
+    "interval_band_s": [
+      30.0,
+      90.0
+    ],
+    "caveats": [
+      "post-warm-up window 0.8 min < 5 min: sparse assessment unreliable"
+    ]
+  },
+  "warnings": [
+    "post-warm-up window 0.8 min < 5 min: sparse (30-90 s) periodicity cannot be assessed"
+  ]
+}

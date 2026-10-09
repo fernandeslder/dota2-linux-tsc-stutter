@@ -1,0 +1,17 @@
+t_epoch,label,detail
+1791512401.363508,run_start,label=T2-spectate-no-cpu0 profile=lite
+1791512401.461203,collectors_start,pid=3907730 profile=lite
+1791512401.466623,offcpu_start,mode=native hz=100.0 pid=0
+1791512406.487510,game_detected,pid=3907898
+1791512406.490265,collectors_pinned,cpus=[0] game_pid=3907898
+1791512533.082548,match_loaded,process=dota2 pids=[3907898] frames=11
+1791512553.082923,warmup_end,warmup_s=20.0
+1791512613.165799,heartbeat,frames=18527 elapsed_min=1.0
+1791512673.245840,heartbeat,frames=24661 elapsed_min=2.0
+1791512733.321639,heartbeat,frames=30774 elapsed_min=3.0
+1791512793.433038,heartbeat,frames=36879 elapsed_min=4.0
+1791512853.540390,heartbeat,frames=43041 elapsed_min=5.0
+1791512913.111719,window_end,minutes=6.0
+1791512913.112883,stop_requested,signal 15
+1791512913.177297,collectors_stop,pid=3907730
+1791512913.313075,window_end,collect stop

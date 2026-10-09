@@ -1,0 +1,31 @@
+thread,state,syscall,wchan,hitches,hitches_frac,coverage_mean,coverage_p50,total_s,threads_mean
+MainThrd,S,futex,__futex_wait,12,1.0000,1.0000,1.0000,0.7333,9.00
+[vkcf] Analysis,S,futex,__futex_wait,12,1.0000,1.0000,1.0000,0.7333,2.00
+[vkrt] Analysis,S,futex,__futex_wait,12,1.0000,1.0000,1.0000,0.7333,2.00
+[vkps] Update,S,futex,__futex_wait,12,1.0000,1.0000,1.0000,0.7333,2.00
+AsyncTextureHoo,S,futex,__futex_wait,12,1.0000,1.0000,1.0000,0.7333,1.00
+dxvk-shader-l,S,futex,__futex_wait,12,1.0000,1.0000,1.0000,0.7333,8.00
+dxvk-shader-n,S,futex,__futex_wait,12,1.0000,1.0000,1.0000,0.7333,14.00
+dxvk-shader-h,S,futex,__futex_wait,12,1.0000,1.0000,1.0000,0.7333,10.00
+SDLWASAPIMgmt,S,futex,__futex_wait,12,1.0000,1.0000,1.0000,0.7333,1.00
+SaveJob/0,S,futex,__futex_wait,12,1.0000,1.0000,1.0000,0.7333,1.00
+CFileWriterThre,S,futex,__futex_wait,12,1.0000,1.0000,1.0000,0.7333,1.00
+SteamEngineWatc,S,futex,__futex_wait,12,1.0000,1.0000,1.0000,0.7333,1.00
+CJobMgr::m_Work,S,futex,__futex_wait,12,1.0000,1.0000,1.0000,0.7333,2.00
+CHTTPCacheFileT,S,futex,__futex_wait,12,1.0000,1.0000,1.0000,0.7333,1.00
+CHTTPClientThre,S,futex,__futex_wait,12,1.0000,1.0000,1.0000,0.7333,1.00
+IPC:CSteamEngin,S,futex,__futex_wait,12,1.0000,1.0000,1.0000,0.7333,1.00
+CNet Encrypt:0,S,futex,__futex_wait,12,1.0000,1.0000,1.0000,0.7333,1.00
+dxvk-cache,S,futex,__futex_wait,12,1.0000,1.0000,1.0000,0.7333,1.00
+cuda00016c0005c,S,poll,do_sys_poll,12,1.0000,1.0000,1.0000,0.7333,1.00
+MainThrd,S,poll,do_sys_poll,12,1.0000,1.0000,1.0000,0.7333,2.00
+cuda-EvtHandlr,S,poll,do_sys_poll,12,1.0000,1.0000,1.0000,0.7333,1.00
+MainThrd,S,clock_nanosleep,hrtimer_nanosleep,12,1.0000,1.0000,1.0000,0.7333,3.00
+DeviceHotplugTh,S,ioctl,ntsync_schedule.isra.0,12,1.0000,1.0000,1.0000,0.7333,1.00
+wine_sechost_de,S,ioctl,ntsync_schedule.isra.0,12,1.0000,1.0000,1.0000,0.7333,1.00
+AsyncIOService/,S,ioctl,ntsync_schedule.isra.0,12,1.0000,1.0000,1.0000,0.7333,3.00
+MainThrd,S,ioctl,ntsync_schedule.isra.0,12,1.0000,1.0000,1.0000,0.7333,6.00
+wine_rpcrt4_ser,S,ioctl,ntsync_schedule.isra.0,12,1.0000,1.0000,1.0000,0.7333,1.00
+CSteamAudioReve,S,ioctl,ntsync_schedule.isra.0,12,1.0000,1.0000,1.0000,0.7333,1.00
+CSteamAudioPart,S,ioctl,ntsync_schedule.isra.0,12,1.0000,1.0000,1.0000,0.7333,1.00
+wine_mmdevapi_n,S,ioctl,ntsync_schedule.isra.0,12,1.0000,1.0000,1.0000,0.7333,1.00

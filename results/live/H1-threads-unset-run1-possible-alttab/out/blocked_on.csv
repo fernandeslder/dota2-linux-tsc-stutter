@@ -1,0 +1,31 @@
+thread,state,syscall,wchan,hitches,hitches_frac,coverage_mean,coverage_p50,total_s,threads_mean
+dota2,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,5.00
+[vkcf] Analysis,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+[vkrt] Analysis,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+Async Pipeline,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,31.00
+VmaDefragThread,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+VKRenderThread,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,8.00
+AsyncTextureHoo,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+mangohud-hwinfo,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+CSteamAudioReve,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+CSteamAudioPart,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+V8 DefaultWorke,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+Panorama Image,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+SaveJob/0,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+Video Decode Th,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,5.00
+CFileWriterThre,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+SteamEngineWatc,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+CJobMgr::m_Work,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,2.00
+CHTTPClientThre,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+IPC:CSteamEngin,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+CHTTPCacheFileT,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+CNet Encrypt:0,S,futex,__futex_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+cuda0000a40002a,S,poll,do_sys_poll,21,1.0000,1.0000,1.0000,2.2873,1.00
+dota2,S,clock_nanosleep,hrtimer_nanosleep,21,1.0000,1.0000,1.0000,2.2873,1.05
+dota2,S,epoll_wait,do_epoll_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+IOCP Thread 0,S,epoll_wait,do_epoll_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+IPC:CSteamEngin,S,epoll_wait,do_epoll_wait,21,1.0000,1.0000,1.0000,2.2873,1.00
+SDLAudioP15,S,futex,__futex_wait,21,1.0000,0.9956,1.0000,2.2773,1.00
+PulseMainloop,S,poll,do_sys_poll,21,1.0000,0.9946,1.0000,2.2673,1.00
+AsyncIOService/,S,futex,__futex_wait,21,1.0000,0.9940,1.0000,2.2630,3.00
+PulseHotplug,S,futex,__futex_wait,21,1.0000,0.9915,1.0000,2.2678,1.00

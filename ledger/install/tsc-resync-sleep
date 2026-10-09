@@ -1,0 +1,4 @@
+#!/bin/sh
+# systemd-sleep hook: re-align CPU0's TSC after suspend/hibernate resume.
+case "$1" in post) /usr/local/bin/tsc-resync 0 1 >/dev/null 2>&1 || true ;; esac
+exit 0

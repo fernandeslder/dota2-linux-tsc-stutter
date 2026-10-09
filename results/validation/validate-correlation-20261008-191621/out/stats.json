@@ -1,0 +1,309 @@
+{
+  "run_id": "validate-correlation-20261008-191621",
+  "config": {
+    "target_fps": 144.0,
+    "k": 2.5,
+    "w_s": 1.0,
+    "floor_ms": 13.88888888888889,
+    "floor_min_ms": 12.0,
+    "floor_target_mult": 2.0,
+    "merge_gap_ms": 100.0,
+    "k_low": 2.0,
+    "floor_low_ms": 10.416666666666668,
+    "floor_low_min_ms": 8.0,
+    "floor_low_target_mult": 1.5,
+    "target_ms": 6.944444444444445
+  },
+  "hitch_definition": {
+    "rule": "frametime_ms > K * rolling_median(+-W, excl. centre) AND frametime_ms > FLOOR",
+    "K": 2.5,
+    "W_s": 1.0,
+    "FLOOR_ms": 13.88888888888889,
+    "merge_gap_ms": 100.0,
+    "target_fps": 144.0,
+    "low_tier": {
+      "K": 2.0,
+      "FLOOR_ms": 10.416666666666668
+    }
+  },
+  "window": {
+    "t_start": 1791497801.272052,
+    "warmup_end": 1791497801.269021,
+    "t_end": 1791498161.89845,
+    "duration_s": 359.27814507484436,
+    "n_frames": 51334,
+    "warmup_source": "mark"
+  },
+  "hitches": {
+    "count": 119,
+    "per_min": 19.87318209548372,
+    "worst_ms": 123.878,
+    "worst_t": 1791498143.800004,
+    "median_ms": 56.9952,
+    "low_count": 89,
+    "low_per_min": 14.863136189059254,
+    "isolated_count": 0,
+    "sparse_per_min": 0.0
+  },
+  "frametime": {
+    "p50_ms": 6.9374,
+    "p95_ms": 10.840519999999998,
+    "p99_ms": 12.948303999999998,
+    "fps_1pct_low": 41.96929913107629,
+    "fps_0.1pct_low": 13.26918058778081,
+    "mean_fps": 142.9126195731195,
+    "frame_drop_frac": 0.004636303424630849,
+    "n_frames": 51334
+  },
+  "data_quality": {
+    "rows_total": 53965,
+    "rows_kept": 53963,
+    "rows_rejected": 2,
+    "reasons": {
+      "nonfinite": 0,
+      "nonpositive": 0,
+      "over_max": 2
+    },
+    "max_plausible_ms": 10000.0,
+    "rejected_examples": [
+      {
+        "t_epoch": 1791497789.157876,
+        "frametime_ms": 101820000.0
+      },
+      {
+        "t_epoch": 1791497796.311446,
+        "frametime_ms": 101827000.0
+      }
+    ],
+    "rows_unparseable": 0
+  },
+  "intervals": {
+    "count": 118,
+    "min_s": 0.10127592086791992,
+    "max_s": 4.2745890617370605,
+    "p50_s": 4.0931936502456665,
+    "p90_s": 4.2588183879852295,
+    "p95_s": 4.2630069851875305,
+    "p99_s": 4.271179137229919,
+    "mean_s": 3.0100461022328524,
+    "cv": 0.5153269934059765,
+    "hist": {
+      "edges_s": [
+        0.10127592086791992,
+        0.30994157791137694,
+        0.518607234954834,
+        0.7272728919982909,
+        0.935938549041748,
+        1.144604206085205,
+        1.353269863128662,
+        1.561935520172119,
+        1.770601177215576,
+        1.9792668342590332,
+        2.1879324913024902,
+        2.396598148345947,
+        2.605263805389404,
+        2.8139294624328612,
+        3.022595119476318,
+        3.2312607765197754,
+        3.4399264335632322,
+        3.648592090606689,
+        3.8572577476501464,
+        4.065923404693603,
+        4.2745890617370605
+      ],
+      "counts": [
+        14,
+        3,
+        1,
+        2,
+        4,
+        3,
+        2,
+        5,
+        0,
+        1,
+        1,
+        3,
+        2,
+        3,
+        2,
+        1,
+        2,
+        1,
+        1,
+        67
+      ]
+    }
+  },
+  "periodicity": {
+    "n_events": 119,
+    "window_s": 360.6294288635254,
+    "window_min": 6.010490481058756,
+    "sparse_assessable": true,
+    "kind": "periodic",
+    "steady": {
+      "period_s": 4.103075981140137,
+      "spectral_peak_s": 1.3926640926640927,
+      "period_source": "interval",
+      "power": 7894.503550417688,
+      "p_value": 0.0024937655860349127,
+      "period_err_s": 0.05431120110258998,
+      "fraction_explained": 0.23529411764705882,
+      "significant": true,
+      "n_events": 119
+    },
+    "sparse": {
+      "period_s": 60.11666666666667,
+      "spectral_peak_s": 30.058333333333334,
+      "period_source": "spectral",
+      "power": 370.9211037762747,
+      "p_value": 0.3266832917705736,
+      "period_err_s": 17.991363644068045,
+      "fraction_explained": 0.31932773109243695,
+      "significant": false,
+      "n_events": 119,
+      "assessable": true
+    },
+    "sparse_residual": {
+      "period_s": 36.07,
+      "spectral_peak_s": 36.07,
+      "period_source": "spectral",
+      "power": 249.19029736194219,
+      "p_value": 0.3940149625935162,
+      "period_err_s": 24.75883531366119,
+      "fraction_explained": 0.2967032967032967,
+      "significant": false,
+      "n_events": 91,
+      "assessable": true,
+      "n_residual": 91
+    },
+    "interval_hist": {
+      "edges_s": [
+        0.10127592086791992,
+        0.26820844650268555,
+        0.4351409721374512,
+        0.6020734977722169,
+        0.7690060234069824,
+        0.935938549041748,
+        1.1028710746765138,
+        1.2698036003112794,
+        1.436736125946045,
+        1.6036686515808105,
+        1.770601177215576,
+        1.9375337028503419,
+        2.1044662284851077,
+        2.2713987541198732,
+        2.438331279754639,
+        2.6052638053894044,
+        2.77219633102417,
+        2.9391288566589355,
+        3.106061382293701,
+        3.2729939079284667,
+        3.4399264335632322,
+        3.6068589591979983,
+        3.773791484832764,
+        3.9407240104675294,
+        4.107656536102295,
+        4.2745890617370605
+      ],
+      "counts": [
+        13,
+        3,
+        2,
+        1,
+        1,
+        4,
+        3,
+        1,
+        2,
+        4,
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        0,
+        20,
+        48
+      ],
+      "mode_s": 4.191122798919678,
+      "median_s": 4.0931936502456665,
+      "quantiles_s": {
+        "10": 0.25505552291870115,
+        "25": 1.6059252619743347,
+        "50": 4.0931936502456665,
+        "75": 4.2349541783332825,
+        "90": 4.2588183879852295
+      }
+    },
+    "autocorr_peak": {
+      "period_s": 16.7,
+      "power": 0.5741871289800323
+    },
+    "lombscargle_peak": {
+      "period_s": 4.160844908238804,
+      "power": 0.13287778946087447
+    },
+    "warnings": []
+  },
+  "sparse": {
+    "assessment": "irregular",
+    "label": "irregular",
+    "n_primary_hitches": 119,
+    "n_sparse_candidates": 79,
+    "severity_min_ms": 20.833333333333336,
+    "residual_applied": true,
+    "steady_period_s": 4.103075981140137,
+    "residual_period_s": 4.123528957366943,
+    "window_s": 360.6294288635254,
+    "window_min": 6.010490481058756,
+    "rate_per_min": 13.143686068376244,
+    "rate_ci95_per_min": [
+      10.31529792708009,
+      16.138449982689817
+    ],
+    "rate_ci_method": "poisson-bootstrap",
+    "n_boot": 2000,
+    "period_s": null,
+    "interval_quantiles_s": {
+      "count": 78,
+      "min_s": 0.10127592086791992,
+      "p10_s": 0.29978327751159667,
+      "p25_s": 3.7974055409431458,
+      "p50_s": 4.109974980354309,
+      "p75_s": 4.243862628936768,
+      "p90_s": 4.262192416191101,
+      "max_s": 54.63376307487488,
+      "mean_s": 4.093605937101902,
+      "cv": 1.4588461957832164
+    },
+    "sparse_band_intervals_s": [
+      54.634
+    ],
+    "mode_s": 55.5,
+    "mode_cluster": {
+      "n": 1,
+      "cv": 0.0,
+      "fraction": 1.0
+    },
+    "cv_max": 0.15,
+    "mode_tol_frac": 0.25,
+    "interval_band_s": [
+      30.0,
+      90.0
+    ],
+    "caveats": [
+      "only 1 interval(s) in the [20, 100] s band (<5): regularity cannot be established"
+    ]
+  },
+  "warnings": [
+    "data quality: dropped 2 implausible frametime(s) (>10000 ms / non-positive / non-finite)"
+  ]
+}

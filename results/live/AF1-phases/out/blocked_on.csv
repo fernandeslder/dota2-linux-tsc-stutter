@@ -1,0 +1,31 @@
+thread,state,syscall,wchan,hitches,hitches_frac,coverage_mean,coverage_p50,total_s,threads_mean
+AsyncIOService/,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,3.00
+dota2,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,5.00
+[vkcf] Analysis,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,1.00
+[vkrt] Analysis,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,1.00
+Async Pipeline,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,31.00
+VmaDefragThread,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,1.00
+AsyncTextureHoo,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,1.00
+mangohud-hwinfo,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,1.00
+CSteamAudioReve,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,1.00
+CSteamAudioPart,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,1.00
+V8 DefaultWorke,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,1.00
+Panorama Image,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,1.00
+SaveJob/0,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,1.00
+Video Decode Th,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,5.00
+CFileWriterThre,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,1.00
+SteamEngineWatc,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,1.00
+CJobMgr::m_Work,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,2.00
+CHTTPClientThre,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,1.00
+CHTTPCacheFileT,S,futex,__futex_wait,42,1.0000,1.0000,1.0000,18.1704,1.00
+IOCP Thread 0,S,epoll_wait,do_epoll_wait,42,1.0000,1.0000,1.0000,18.1704,1.00
+dota2,S,clock_nanosleep,hrtimer_nanosleep,42,1.0000,1.0000,1.0000,18.1704,1.00
+cuda0000a40002a,S,poll,do_sys_poll,42,1.0000,1.0000,1.0000,18.1704,1.00
+COfflineMessage,D,access,read_extent_buffer_pages,42,1.0000,1.0000,1.0000,18.1704,1.00
+CNet Encrypt:0,S,futex,__futex_wait,42,1.0000,0.9998,1.0000,18.1604,1.00
+IPC:CSteamEngin,S,futex,__futex_wait,42,1.0000,0.9997,1.0000,18.1502,1.00
+PulseHotplug,S,futex,__futex_wait,42,1.0000,0.9988,1.0000,18.1117,1.00
+IPC:CSteamEngin,S,epoll_wait,do_epoll_wait,42,1.0000,0.9984,1.0000,18.0904,1.00
+[vkps] Update,S,futex,__futex_wait,42,1.0000,0.9972,1.0000,18.0559,1.00
+VKRenderThread,S,futex,__futex_wait,42,1.0000,0.9968,1.0000,18.1504,8.00
+dota2,S,epoll_wait,do_epoll_wait,42,1.0000,0.9965,1.0000,18.1203,1.00

@@ -1,0 +1,310 @@
+{
+  "schema_version": "1.0",
+  "tool": "stutter",
+  "run_id": "live-T1-no-cpu0",
+  "run_dir": "/path/to/repo/runs/live-T1-no-cpu0",
+  "generated_utc": "2026-10-09T02:18:57.340332+00:00",
+  "config": {
+    "target_fps": 144.0,
+    "k": 2.5,
+    "w_s": 1.0,
+    "floor_ms": 13.88888888888889,
+    "floor_min_ms": 12.0,
+    "floor_target_mult": 2.0,
+    "merge_gap_ms": 100.0,
+    "k_low": 2.0,
+    "floor_low_ms": 10.416666666666668,
+    "floor_low_min_ms": 8.0,
+    "floor_low_target_mult": 1.5,
+    "target_ms": 6.944444444444445
+  },
+  "hitch_definition": {
+    "rule": "frametime_ms > K * rolling_median(+-W, excl. centre) AND frametime_ms > FLOOR",
+    "K": 2.5,
+    "W_s": 1.0,
+    "FLOOR_ms": 13.88888888888889,
+    "merge_gap_ms": 100.0,
+    "target_fps": 144.0,
+    "low_tier": {
+      "K": 2.0,
+      "FLOOR_ms": 10.416666666666668
+    }
+  },
+  "window": {
+    "t_start": 1791511974.571297,
+    "warmup_end": 1791511974.569732,
+    "t_end": 1791512335.002271,
+    "duration_s": 360.491881608963,
+    "n_frames": 51234,
+    "warmup_source": "mark"
+  },
+  "hitches": {
+    "count": 0,
+    "per_min": 0.0,
+    "worst_ms": NaN,
+    "worst_t": NaN,
+    "median_ms": NaN,
+    "low_count": 4,
+    "low_per_min": 0.6657570176860061,
+    "isolated_count": 0,
+    "sparse_per_min": 0.0
+  },
+  "frametime": {
+    "p50_ms": 7.06919,
+    "p95_ms": 9.64445,
+    "p99_ms": 10.573307999999995,
+    "fps_1pct_low": 89.26443133102194,
+    "fps_0.1pct_low": 79.01221361681294,
+    "mean_fps": 142.16593474467098,
+    "frame_drop_frac": 7.807315454580943e-05,
+    "n_frames": 51234
+  },
+  "data_quality": {
+    "rows_total": 61467,
+    "rows_kept": 61467,
+    "rows_rejected": 0,
+    "reasons": {
+      "nonfinite": 0,
+      "nonpositive": 0,
+      "over_max": 0
+    },
+    "max_plausible_ms": 10000.0,
+    "rejected_examples": [],
+    "rows_unparseable": 0
+  },
+  "intervals": {
+    "count": 0,
+    "hist": null
+  },
+  "periodicity": {
+    "n_events": 0,
+    "window_s": 360.43253898620605,
+    "window_min": 6.0072089831034345,
+    "sparse_assessable": true,
+    "kind": "insufficient",
+    "steady": null,
+    "sparse": null,
+    "sparse_residual": null,
+    "interval_hist": null,
+    "autocorr_peak": null,
+    "lombscargle_peak": null,
+    "warnings": [
+      "only 0 hitch event(s): periodic verdict unreliable"
+    ]
+  },
+  "sparse": {
+    "assessment": "none",
+    "label": "none",
+    "n_primary_hitches": 0,
+    "n_sparse_candidates": 0,
+    "severity_min_ms": 20.833333333333336,
+    "residual_applied": false,
+    "steady_period_s": null,
+    "residual_period_s": null,
+    "window_s": 360.43253898620605,
+    "window_min": 6.0072089831034345,
+    "rate_per_min": NaN,
+    "rate_ci95_per_min": [
+      NaN,
+      NaN
+    ],
+    "rate_ci_method": "poisson-bootstrap",
+    "n_boot": 2000,
+    "period_s": null,
+    "interval_quantiles_s": {
+      "count": 0
+    },
+    "sparse_band_intervals_s": [],
+    "mode_s": null,
+    "mode_cluster": {
+      "n": 0,
+      "cv": null,
+      "fraction": null
+    },
+    "cv_max": 0.15,
+    "mode_tol_frac": 0.25,
+    "interval_band_s": [
+      30.0,
+      90.0
+    ],
+    "caveats": [
+      "no severe isolated hitches in the window"
+    ]
+  },
+  "correlation": {
+    "signals": [],
+    "logs": []
+  },
+  "blocked": {
+    "available": true,
+    "window_rule": "[hitch_start - pre_ms, hitch_end]",
+    "pre_ms": 50.0,
+    "min_coverage": 0.05,
+    "n_hitches": 0,
+    "n_hitches_with_data": 0,
+    "n_threads_seen": 92,
+    "game_pid": 3898853,
+    "rows": [],
+    "n_rows_total": 0,
+    "main_thread": [],
+    "per_thread_cpu": [
+      {
+        "thread": "AsyncIOService/",
+        "cpu_pct_mean": 2688194.5259180325,
+        "samples": 61,
+        "n_threads": 3
+      },
+      {
+        "thread": "AsyncTextureHoo",
+        "cpu_pct_mean": 1653380.1524444446,
+        "samples": 9,
+        "n_threads": 1
+      },
+      {
+        "thread": "mangohud-nvidia",
+        "cpu_pct_mean": 1652882.8273820956,
+        "samples": 458,
+        "n_threads": 1
+      },
+      {
+        "thread": "dota2",
+        "cpu_pct_mean": 837402.1528296976,
+        "samples": 963,
+        "n_threads": 7
+      },
+      {
+        "thread": "VKRenderThread",
+        "cpu_pct_mean": 439399.9931841619,
+        "samples": 1086,
+        "n_threads": 8
+      },
+      {
+        "thread": "[vkps] Update",
+        "cpu_pct_mean": 351211.2725964912,
+        "samples": 57,
+        "n_threads": 1
+      },
+      {
+        "thread": "mangohud-hwinfo",
+        "cpu_pct_mean": 295358.2104090909,
+        "samples": 44,
+        "n_threads": 1
+      },
+      {
+        "thread": "IPC:CSteamEngin",
+        "cpu_pct_mean": 288252.83653448283,
+        "samples": 58,
+        "n_threads": 2
+      },
+      {
+        "thread": "SDLAudioP15",
+        "cpu_pct_mean": 287818.93776595744,
+        "samples": 47,
+        "n_threads": 1
+      },
+      {
+        "thread": "GlobPool/3",
+        "cpu_pct_mean": 271706.24711692304,
+        "samples": 325,
+        "n_threads": 1
+      },
+      {
+        "thread": "GlobPool/6",
+        "cpu_pct_mean": 271500.5219396822,
+        "samples": 315,
+        "n_threads": 1
+      },
+      {
+        "thread": "GlobPool/0",
+        "cpu_pct_mean": 268530.7567968747,
+        "samples": 320,
+        "n_threads": 1
+      },
+      {
+        "thread": "GlobPool/2",
+        "cpu_pct_mean": 258886.79006885245,
+        "samples": 305,
+        "n_threads": 1
+      },
+      {
+        "thread": "GlobPool/5",
+        "cpu_pct_mean": 249978.4215768023,
+        "samples": 319,
+        "n_threads": 1
+      },
+      {
+        "thread": "GlobPool/1",
+        "cpu_pct_mean": 247459.5533535032,
+        "samples": 314,
+        "n_threads": 1
+      },
+      {
+        "thread": "AudioMixer",
+        "cpu_pct_mean": 238437.79548780492,
+        "samples": 82,
+        "n_threads": 1
+      },
+      {
+        "thread": "PulseHotplug",
+        "cpu_pct_mean": 237424.39097435898,
+        "samples": 39,
+        "n_threads": 1
+      },
+      {
+        "thread": "Async Pipeline",
+        "cpu_pct_mean": 226488.89924193537,
+        "samples": 62,
+        "n_threads": 31
+      },
+      {
+        "thread": "GlobPool/4",
+        "cpu_pct_mean": 215232.47304777056,
+        "samples": 314,
+        "n_threads": 1
+      },
+      {
+        "thread": "PulseMainloop",
+        "cpu_pct_mean": 174239.29247058817,
+        "samples": 119,
+        "n_threads": 1
+      },
+      {
+        "thread": "CJobMgr::m_Work",
+        "cpu_pct_mean": 97867.093,
+        "samples": 2,
+        "n_threads": 2
+      },
+      {
+        "thread": "CHTTPCacheIniti",
+        "cpu_pct_mean": 2410.52,
+        "samples": 1,
+        "n_threads": 1
+      },
+      {
+        "thread": "CHTTPCacheFileT",
+        "cpu_pct_mean": 104.547,
+        "samples": 1,
+        "n_threads": 1
+      }
+    ],
+    "cpu_source": "threads_cpu.csv",
+    "notes": [
+      "no hitches in the analysis window"
+    ]
+  },
+  "warnings": [
+    "only 0 hitch event(s): periodic verdict unreliable"
+  ],
+  "artifacts": {
+    "hitches_csv": "hitches.csv",
+    "stats_json": "stats.json",
+    "correlation_signals_csv": "correlation_signals.csv",
+    "correlation_logs_csv": "correlation_logs.csv",
+    "blocked_on_csv": "blocked_on.csv",
+    "frametime_trace.png": "frametime_trace.png",
+    "hitch_timeline.png": "hitch_timeline.png",
+    "interval_histogram.png": "interval_histogram.png",
+    "spectrum_autocorr.png": "spectrum_autocorr.png",
+    "correlation_panel.png": "correlation_panel.png"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "provisional": false,
+  "note": "Derived from 7 untouched live-spectate baseline runs (docs/FIXED-DEFINITION.md): 17-55 hitches/min, worst 1.7-3.3 s, 0.1% low 0.8-1.6 fps; vs fixed runs 1.8-3.0 hitches/min, worst <=33 ms, 0.1% low 46-54 fps.",
+  "n_runs": 3,
+  "checks": [
+    {
+      "criterion": "min_consecutive_runs",
+      "passed": true,
+      "details": {
+        "have": 3,
+        "need": 3
+      }
+    },
+    {
+      "criterion": "no_steady_periodic",
+      "passed": true,
+      "details": {
+        "offenders": [],
+        "max_period_s": 10.0,
+        "p_threshold": 0.01
+      }
+    },
+    {
+      "criterion": "fps_0p1pct_low_min",
+      "passed": true,
+      "details": {
+        "offenders": [],
+        "value": 30.0
+      }
+    },
+    {
+      "criterion": "min_run_duration_min",
+      "passed": true,
+      "details": {
+        "offenders": [],
+        "value": 5.0
+      }
+    },
+    {
+      "criterion": "hitches_per_min_max",
+      "passed": true,
+      "details": {
+        "offenders": [],
+        "value": 6.0
+      }
+    },
+    {
+      "criterion": "worst_hitch_ms_max",
+      "passed": true,
+      "details": {
+        "offenders": [],
+        "value": 100.0
+      }
+    },
+    {
+      "criterion": "longest_run_min",
+      "passed": true,
+      "details": {
+        "longest_min": 20.01826705932617,
+        "need": 15.0
+      }
+    }
+  ]
+}

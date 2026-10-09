@@ -1,0 +1,16 @@
+t_epoch,label,detail
+1791508086.899596,run_start,label=C2-nosound profile=full
+1791508086.997748,collectors_start,pid=3819082 profile=full
+1791508087.004432,offcpu_start,mode=native hz=100.0 pid=0
+1791508092.043233,game_detected,pid=3819303
+1791508181.372859,match_loaded,process=dota2 pids=[3819303] frames=5
+1791508201.373167,warmup_end,warmup_s=20.0
+1791508261.682616,heartbeat,frames=19009 elapsed_min=1.0
+1791508321.928579,heartbeat,frames=27448 elapsed_min=2.0
+1791508382.203928,heartbeat,frames=35568 elapsed_min=3.0
+1791508442.465317,heartbeat,frames=43764 elapsed_min=4.0
+1791508502.776443,heartbeat,frames=52210 elapsed_min=5.0
+1791508561.430184,window_end,minutes=6.0
+1791508561.430447,stop_requested,signal 15
+1791508561.479710,collectors_stop,pid=3819082
+1791508561.630701,window_end,collect stop

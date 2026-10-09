@@ -1,0 +1,16 @@
+t_epoch,label,detail
+1791510228.363194,run_start,label=G1-gamescope profile=lite
+1791510228.461954,collectors_start,pid=3864021 profile=lite
+1791510228.466241,offcpu_start,mode=native hz=100.0 pid=0
+1791510233.491588,game_detected,pid=3864233
+1791510343.189952,match_loaded,process=dota2 pids=[3864233] frames=11
+1791510363.190315,warmup_end,warmup_s=20.0
+1791510423.603194,heartbeat,frames=19903 elapsed_min=1.0
+1791510483.923623,heartbeat,frames=28213 elapsed_min=2.0
+1791510544.315032,heartbeat,frames=36660 elapsed_min=3.0
+1791510604.698765,heartbeat,frames=45118 elapsed_min=4.0
+1791510664.962015,heartbeat,frames=53433 elapsed_min=5.0
+1791510723.642829,window_end,minutes=6.0
+1791510723.643040,stop_requested,signal 15
+1791510723.678730,collectors_stop,pid=3864021
+1791510723.843307,window_end,collect stop

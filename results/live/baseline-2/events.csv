@@ -1,0 +1,15 @@
+t_epoch,label,detail
+1791503006.498398,run_start,label=baseline-2 profile=full
+1791503006.593003,collectors_start,pid=3727028 profile=full
+1791503011.636511,game_detected,pid=3727236
+1791503132.937902,match_loaded,process=dota2 pids=[3727236] frames=12
+1791503152.938289,warmup_end,warmup_s=20.0
+1791503213.372307,heartbeat,frames=15854 elapsed_min=1.0
+1791503273.822165,heartbeat,frames=21811 elapsed_min=2.0
+1791503334.268574,heartbeat,frames=27394 elapsed_min=3.0
+1791503394.778767,heartbeat,frames=32670 elapsed_min=4.0
+1791503455.250585,heartbeat,frames=38274 elapsed_min=5.0
+1791503513.219972,window_end,minutes=6.0
+1791503513.220236,stop_requested,signal 15
+1791503513.246009,collectors_stop,pid=3727028
+1791503513.420437,window_end,collect stop

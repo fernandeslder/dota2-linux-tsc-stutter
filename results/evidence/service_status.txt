@@ -1,0 +1,18 @@
+# systemctl status tsc-resync (after install)
+● tsc-resync.service - Re-align CPU0 TSC with the other CPUs (firmware leaves it ~2.95 s behind; stalls Source 2 games)
+     Loaded: loaded (/etc/systemd/system/tsc-resync.service; enabled; preset: disabled)
+     Active: active (exited) since Fri 2026-10-09 00:30:41 ADT; 3h 4min ago
+       Docs: file:///path/to/repo/REPORT.md
+   Main PID: <pid> (code=exited, status=0/SUCCESS)
+   Mem peak: 3M
+        CPU: 123ms
+
+Oct 09 00:30:40 HOSTNAME systemd[1]: Starting Re-align CPU0 TSC with the other CPUs (firmware leaves it ~2.95 s behind; stalls Source 2 games)...
+Oct 09 00:30:41 HOSTNAME tsc-resync[<pid>]: iter 0: target cpu0 offset +22.465551 s vs ref cpu1 +22.465555 s  (diff +0.000005 s, 11307 cycles)
+Oct 09 00:30:41 HOSTNAME tsc-resync[<pid>]: already aligned (<1 ms); nothing to do
+
+# installed files (mode, size, path; the install must be root:root, see README "Build and install")
+-rw-r--r-- 398 /etc/systemd/system/tsc-resync.service
+-rwxr-xr-x 172 /usr/lib/systemd/system-sleep/tsc-resync
+-rwxr-xr-x 16296 /usr/local/bin/tsc-check
+-rwxr-xr-x 16864 /usr/local/bin/tsc-resync

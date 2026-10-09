@@ -1,0 +1,15 @@
+t_epoch,label,detail
+1791499316.258123,run_start,label=baseline-1 profile=full
+1791499316.354997,collectors_start,pid=3594104 profile=full
+1791499467.499607,game_detected,pid=3599817
+1791499589.849299,match_loaded,process=dota2 pids=[3599817] frames=7
+1791499609.849641,warmup_end,warmup_s=20.0
+1791499670.322975,heartbeat,frames=15676 elapsed_min=1.0
+1791499730.749935,heartbeat,frames=20639 elapsed_min=2.0
+1791499791.231667,heartbeat,frames=26381 elapsed_min=3.0
+1791499851.728012,heartbeat,frames=31666 elapsed_min=4.0
+1791499911.730552,heartbeat,frames=37472 elapsed_min=5.0
+1791499926.866043,window_end,aborted: MangoHud frames stopped for >10s (last count 37865)
+1791499926.866235,stop_requested,signal 15
+1791499926.897792,collectors_stop,pid=3594104
+1791499927.066412,window_end,collect stop

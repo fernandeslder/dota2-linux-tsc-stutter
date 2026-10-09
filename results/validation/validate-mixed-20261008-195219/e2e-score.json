@@ -1,0 +1,159 @@
+{
+  "run_dir": "runs/validate-mixed-20261008-195219",
+  "scenario": "mixed",
+  "window_s": 56.6,
+  "n_frames": 8069,
+  "n_gt": 156,
+  "n_detected": 17,
+  "detection": {
+    "tp": 15,
+    "fp": 2,
+    "fn": 141,
+    "precision": 0.8824,
+    "recall": 0.0962,
+    "err_ms": [
+      12.5,
+      12.6,
+      12.7,
+      12.7,
+      12.8,
+      12.8,
+      12.9,
+      13.1,
+      13.2,
+      13.3,
+      13.4,
+      13.5,
+      13.7,
+      13.8,
+      14.4
+    ]
+  },
+  "hitches_per_min": 18.019780720805787,
+  "worst_ms": 78.8368,
+  "p50_ms": 6.93978,
+  "p99_ms": 12.954523999999997,
+  "periodicity_kind": "periodic",
+  "steady": {
+    "period_s": 3.9820000000000007,
+    "period_err_s": 0.4678343417392254,
+    "p_value": 0.0024937655860349127,
+    "significant": true,
+    "fraction_explained": 0.8235294117647058
+  },
+  "sparse": {
+    "period_s": 85.32857142857144,
+    "p_value": 0.24688279301745636,
+    "significant": false,
+    "fraction_explained": 0.23529411764705882
+  },
+  "sparse_residual": {
+    "period_s": null,
+    "p_value": null,
+    "significant": null
+  },
+  "sparse_assessable": true,
+  "sparse_assessment": {
+    "assessment": "none",
+    "label": "none",
+    "n_primary_hitches": 17,
+    "n_sparse_candidates": 2,
+    "severity_min_ms": 20.833333333333336,
+    "residual_applied": true,
+    "steady_period_s": 3.9820000000000007,
+    "window_s": 597.2575259208679,
+    "window_min": 9.954292098681131,
+    "rate_per_min": 0.20091835563726174,
+    "rate_ci95_per_min": [
+      0.0,
+      0.5022958890931544
+    ],
+    "rate_ci_method": "poisson-bootstrap",
+    "n_boot": 2000,
+    "period_s": null,
+    "interval_quantiles_s": {
+      "count": 1,
+      "min_s": 11.444243907928467,
+      "p10_s": 11.444243907928467,
+      "p25_s": 11.444243907928467,
+      "p50_s": 11.444243907928467,
+      "p75_s": 11.444243907928467,
+      "p90_s": 11.444243907928467,
+      "max_s": 11.444243907928467,
+      "mean_s": 11.444243907928467,
+      "cv": 0.0
+    },
+    "sparse_band_intervals_s": [],
+    "mode_s": null,
+    "mode_cluster": {
+      "n": 0,
+      "cv": null,
+      "fraction": null
+    },
+    "cv_max": 0.15,
+    "mode_tol_frac": 0.25,
+    "interval_band_s": [
+      20.0,
+      100.0
+    ],
+    "caveats": [
+      "only 2 sparse candidate(s) (<8): rate/period estimate is uncertain"
+    ]
+  },
+  "data_quality": {
+    "rows_total": 10757,
+    "rows_kept": 10757,
+    "rows_rejected": 0,
+    "reasons": {
+      "nonfinite": 0,
+      "nonpositive": 0,
+      "over_max": 0
+    },
+    "max_plausible_ms": 10000.0,
+    "rejected_examples": [],
+    "rows_unparseable": 0
+  },
+  "correlation_top5": [
+    {
+      "signal": "cpufreq",
+      "column": "cpu28_mhz",
+      "feature": "mean",
+      "cliffs_delta": 0.738,
+      "z": 1.34,
+      "q_value": 0.25654548487540935
+    },
+    {
+      "signal": "sys",
+      "column": "forks_per_s",
+      "feature": "mean",
+      "cliffs_delta": 0.71,
+      "z": 0.4,
+      "q_value": 0.25654548487540935
+    },
+    {
+      "signal": "cpufreq",
+      "column": "cpu8_mhz",
+      "feature": "step",
+      "cliffs_delta": 0.566,
+      "z": 1.14,
+      "q_value": 0.9240210438853452
+    },
+    {
+      "signal": "cpu",
+      "column": "cpu6_util",
+      "feature": "mean",
+      "cliffs_delta": 0.543,
+      "z": 1.16,
+      "q_value": 0.9240210438853452
+    },
+    {
+      "signal": "cpufreq",
+      "column": "cpu11_mhz",
+      "feature": "max",
+      "cliffs_delta": -0.52,
+      "z": -5.96,
+      "q_value": 0.9240210438853452
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,16 @@
+t_epoch,label,detail
+1791505051.919662,run_start,label=D1-blocked profile=full
+1791505052.021837,collectors_start,pid=3763173 profile=full
+1791505052.027877,offcpu_start,mode=native hz=100.0 pid=0
+1791505057.061308,game_detected,pid=3763402
+1791505181.417804,match_loaded,process=dota2 pids=[3763402] frames=18
+1791505201.418126,warmup_end,warmup_s=20.0
+1791505261.851617,heartbeat,frames=17017 elapsed_min=1.0
+1791505322.338428,heartbeat,frames=23684 elapsed_min=2.0
+1791505382.800868,heartbeat,frames=29944 elapsed_min=3.0
+1791505442.816810,heartbeat,frames=36158 elapsed_min=4.0
+1791505503.319897,heartbeat,frames=42413 elapsed_min=5.0
+1791505561.762382,window_end,minutes=6.0
+1791505561.762656,stop_requested,signal 15
+1791505561.816084,collectors_stop,pid=3763173
+1791505561.962907,window_end,collect stop

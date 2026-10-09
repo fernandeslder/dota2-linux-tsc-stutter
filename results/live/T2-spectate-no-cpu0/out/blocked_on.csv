@@ -1,0 +1,31 @@
+thread,state,syscall,wchan,hitches,hitches_frac,coverage_mean,coverage_p50,total_s,threads_mean
+dota2,S,futex,__futex_wait,11,1.0000,1.0000,1.0000,0.5500,5.00
+[vkcf] Analysis,S,futex,__futex_wait,11,1.0000,1.0000,1.0000,0.5500,1.00
+[vkrt] Analysis,S,futex,__futex_wait,11,1.0000,1.0000,1.0000,0.5500,1.00
+[vkps] Update,S,futex,__futex_wait,11,1.0000,1.0000,1.0000,0.5500,1.00
+Async Pipeline,S,futex,__futex_wait,11,1.0000,1.0000,1.0000,0.5500,31.00
+VmaDefragThread,S,futex,__futex_wait,11,1.0000,1.0000,1.0000,0.5500,1.00
+VKRenderThread,S,futex,__futex_wait,11,1.0000,1.0000,1.0000,0.5500,8.00
+AsyncTextureHoo,S,futex,__futex_wait,11,1.0000,1.0000,1.0000,0.5500,1.00
+mangohud-hwinfo,S,futex,__futex_wait,11,1.0000,1.0000,1.0000,0.5500,1.00
+CSteamAudioReve,S,futex,__futex_wait,11,1.0000,1.0000,1.0000,0.5500,1.00
+CSteamAudioPart,S,futex,__futex_wait,11,1.0000,1.0000,1.0000,0.5500,1.00
+V8 DefaultWorke,S,futex,__futex_wait,11,1.0000,1.0000,1.0000,0.5500,1.00
+PulseHotplug,S,futex,__futex_wait,11,1.0000,1.0000,1.0000,0.5500,1.00
+Panorama Image,S,futex,__futex_wait,11,1.0000,1.0000,1.0000,0.5500,1.00
+SaveJob/0,S,futex,__futex_wait,11,1.0000,1.0000,1.0000,0.5500,1.00
+AudioMixer,S,futex,__futex_wait,11,1.0000,1.0000,1.0000,0.5500,1.00
+cuda0000a40002a,S,poll,do_sys_poll,11,1.0000,1.0000,1.0000,0.5500,1.00
+dota2,S,clock_nanosleep,hrtimer_nanosleep,11,1.0000,1.0000,1.0000,0.5500,1.00
+dota2,S,epoll_wait,do_epoll_wait,11,1.0000,1.0000,1.0000,0.5500,1.00
+AsyncIOService/,S,futex,__futex_wait,11,1.0000,0.9957,1.0000,0.5477,3.00
+dota2,S,poll,do_sys_poll,11,1.0000,0.9784,1.0000,0.5381,1.00
+SDLAudioP15,S,futex,__futex_wait,11,1.0000,0.9671,1.0000,0.5319,1.00
+PulseMainloop,S,poll,do_sys_poll,11,1.0000,0.9491,1.0000,0.5220,1.00
+mangohud-nvidia,S,clock_nanosleep,hrtimer_nanosleep,11,1.0000,0.9034,0.9382,0.4969,1.00
+GlobPool/6,S,futex,__futex_wait,11,1.0000,0.6632,0.6595,0.3648,1.00
+GlobPool/4,S,futex,__futex_wait,11,1.0000,0.6186,0.6071,0.3402,1.00
+GlobPool/5,S,futex,__futex_wait,11,1.0000,0.6004,0.5999,0.3302,1.00
+GlobPool/2,S,futex,__futex_wait,11,1.0000,0.5710,0.5999,0.3141,1.00
+GlobPool/1,S,futex,__futex_wait,11,1.0000,0.5686,0.5999,0.3128,1.00
+GlobPool/3,S,futex,__futex_wait,11,1.0000,0.5609,0.5999,0.3085,1.00

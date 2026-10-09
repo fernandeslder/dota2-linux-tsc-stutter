@@ -1,0 +1,444 @@
+## Window & mapping
+* perf window : mono 113480.6368..113580.6428 = epoch 1791509447.265..1791509547.271 (100.0s)
+* frames mapped: 65265  (mangohud offset +0.0000s)
+* hitches >60 ms: 11 (6.6/min)
+* control windows: 300
+
+## Dota thread map (pid 3838464, main tid=3838464)
+* dota2: tid=3838464 MAIN
+* GlobPool/0: tid=3838468
+* GlobPool/1: tid=3838469
+* GlobPool/2: tid=3838470
+* GlobPool/3: tid=3838471
+* GlobPool/4: tid=3838472
+* GlobPool/5: tid=3838473
+* GlobPool/6: tid=3838474
+* mangohud-nvidia: tid=3838487
+* dota2: tid=3838498
+* AsyncIOService/: tid=3838499
+* AsyncIOService/: tid=3838500
+* AsyncIOService/: tid=3838501
+* dota2: tid=3838506
+* [vkcf] Analysis: tid=3838507
+* [vkps] Update: tid=3838510
+* dota2: tid=3838513
+* VKRenderThread: tid=3838548 render
+* AsyncTextureHoo: tid=3838549
+* VKRenderThread: tid=3838559 render
+* VKRenderThread: tid=3838560 render
+* VKRenderThread: tid=3838561 render
+* VKRenderThread: tid=3838562 render
+* VKRenderThread: tid=3838563 render
+* VKRenderThread: tid=3838564 render
+* VKRenderThread: tid=3838565 render
+* mangohud-hwinfo: tid=3838569
+* dota2: tid=3838572
+* V8 DefaultWorke: tid=3838587
+* PulseMainloop: tid=3838595
+* PulseHotplug: tid=3838596
+* SDLAudioP15: tid=3838597
+* dota2: tid=3838653
+* AudioMixer: tid=3838680
+* IOCP Thread 0: tid=3839371
+* IPC:CSteamEngin: tid=3839372
+* SteamEngineWatc: tid=3839376
+* CJobMgr::m_Work: tid=3839378
+* CHTTPClientThre: tid=3839379
+* IPC:CSteamEngin: tid=3839380
+* CHTTPCacheFileT: tid=3839381
+* CNet Encrypt:0: tid=3839382
+* CJobMgr::m_Work: tid=3839392
+
+## Main thread: stall window, switch-out, and the waker that ends it
+```
+     hitch_t   ft_ms   blk_ms   ovl_ms  in cpu0idle% out_st            waker wk_cpu    lag                          chain
+1791509470.950   317.8 (main not blocked)
+1791509472.399   201.3    194.5    150.4   Y      16.3      S       GlobPool/3      4   0.02 GlobPool/4(0) -> GlobPool/0(7)
+1791509472.655    86.2     35.2    -61.6   n      51.5      S       GlobPool/0     10   0.02 GlobPool/6(28) -> GlobPool/5(1
+1791509473.235    88.6     78.7     38.3   Y      35.6      S   VKRenderThread     15   0.02                               
+1791509483.672  2021.9   2017.1   1970.1   Y       2.3      S       GlobPool/0      0   0.02                               
+1791509487.305  2957.8   2950.6   2907.6   Y       1.0      S       GlobPool/5     30   0.02                  GlobPool/6(0)
+1791509492.657  1579.7   1572.6   1530.3   Y       2.5      S   VKRenderThread     20   0.40                               
+1791509501.458   233.5    224.7    184.0   Y      17.9      S       GlobPool/0     22   0.01 VKRenderThread(1) -> GlobPool/
+1791509507.334  1001.6    250.1    250.1   Y       4.6      S          swapper     26   0.01                               
+1791509523.690   519.6    511.8    467.9   Y       6.0      S       GlobPool/2     31   0.01                               
+1791509526.137   905.5    250.1    250.1   Y       5.0      S          swapper      5   0.01                               
+```
+
+## Other dota threads blocked for >= 50% of the hitch
+```
+     hitch_t   ft_ms       tid             comm blocked_ms out_state            waker wk_cpu
+1791509470.950   317.8   3838506            dota2     2000.1         S          swapper     12
+1791509470.950   317.8   3838569  mangohud-hwinfo      506.6         S   VKRenderThread     15
+1791509470.950   317.8   3838561   VKRenderThread      313.4         S   VKRenderThread      0
+1791509470.950   317.8   3838560   VKRenderThread      311.7         S   VKRenderThread      0
+1791509470.950   317.8   3838563   VKRenderThread      311.7         S   VKRenderThread      0
+1791509470.950   317.8   3838562   VKRenderThread      311.6         S   VKRenderThread      0
+1791509470.950   317.8   3838565   VKRenderThread      311.6         S   VKRenderThread      0
+1791509470.950   317.8   3838559   VKRenderThread      310.6         S   VKRenderThread      0
+1791509470.950   317.8   3839392  CJobMgr::m_Work      250.1         S          swapper      2
+1791509470.950   317.8   3839378  CJobMgr::m_Work      250.1         S          swapper     10
+1791509470.950   317.8   3839379  CHTTPClientThre      250.1         S          swapper     12
+1791509470.950   317.8   3839381  CHTTPCacheFileT      250.1         S          swapper     29
+1791509470.950   317.8   3838474       GlobPool/6      202.5         S            dota2      8
+1791509470.950   317.8   3838470       GlobPool/2      202.4         S            dota2      8
+1791509470.950   317.8   3838472       GlobPool/4      202.4         S            dota2      8
+1791509470.950   317.8   3838469       GlobPool/1      202.0         S            dota2      8
+1791509470.950   317.8   3838468       GlobPool/0      201.9         S            dota2      8
+1791509470.950   317.8   3838471       GlobPool/3      201.8         S            dota2      8
+1791509470.950   317.8   3838473       GlobPool/5      201.8         S            dota2      8
+1791509470.950   317.8   3838548   VKRenderThread      201.8         S            dota2      8
+1791509470.950   317.8   3839380  IPC:CSteamEngin      200.1         S  Chrome_IOThread     26
+1791509472.399   201.3   3839378  CJobMgr::m_Work      250.1         S          swapper     12
+1791509472.399   201.3   3839381  CHTTPCacheFileT      250.1         S          swapper     29
+1791509472.399   201.3   3839379  CHTTPClientThre      250.1         S          swapper     12
+1791509472.399   201.3   3839392  CJobMgr::m_Work      250.1         S          swapper      2
+1791509472.399   201.3   3839380  IPC:CSteamEngin      200.1         S          swapper     19
+1791509472.399   201.3   3838559   VKRenderThread      193.4         S   VKRenderThread     12
+1791509472.399   201.3   3838563   VKRenderThread      193.4         S   VKRenderThread     12
+1791509472.399   201.3   3838565   VKRenderThread      193.4         S   VKRenderThread     12
+1791509472.399   201.3   3838560   VKRenderThread      193.4         S   VKRenderThread     12
+1791509472.399   201.3   3838561   VKRenderThread      193.4         S   VKRenderThread     12
+1791509472.399   201.3   3838564   VKRenderThread      193.4         S   VKRenderThread     12
+1791509472.399   201.3   3838562   VKRenderThread      193.3         S   VKRenderThread     12
+1791509472.399   201.3   3838548   VKRenderThread      193.1         S       GlobPool/3      4
+1791509472.399   201.3   3838469       GlobPool/1      192.4         S       GlobPool/2     13
+1791509472.399   201.3   3838471       GlobPool/3      192.3         S       GlobPool/4      0
+1791509472.399   201.3   3838470       GlobPool/2      192.3         S       GlobPool/0      7
+1791509472.399   201.3   3838474       GlobPool/6      191.4         S       GlobPool/4      0
+1791509472.399   201.3   3838473       GlobPool/5      191.2         S       GlobPool/4      0
+1791509472.399   201.3   3838472       GlobPool/4      191.0         S       GlobPool/0      7
+1791509472.655    86.2   3838506            dota2     2000.1         S          swapper     12
+1791509472.655    86.2   3839381  CHTTPCacheFileT      250.1         S          swapper     29
+1791509472.655    86.2   3839392  CJobMgr::m_Work      250.1         S          swapper      2
+1791509472.655    86.2   3839379  CHTTPClientThre      250.1         S          swapper     12
+1791509472.655    86.2   3839378  CJobMgr::m_Work      250.1         S          swapper     12
+1791509472.655    86.2   3839380  IPC:CSteamEngin      200.1         S          swapper     19
+1791509472.655    86.2   3838498            dota2      100.3         S       Compositor     22
+1791509472.655    86.2   3838572            dota2      100.2         S       Compositor     12
+1791509472.655    86.2   3838559   VKRenderThread       80.4         S   VKRenderThread     16
+1791509472.655    86.2   3838564   VKRenderThread       80.4         S   VKRenderThread     16
+1791509472.655    86.2   3838563   VKRenderThread       80.4         S   VKRenderThread     16
+1791509472.655    86.2   3838562   VKRenderThread       80.3         S   VKRenderThread     16
+1791509472.655    86.2   3838565   VKRenderThread       80.2         S   VKRenderThread     16
+1791509472.655    86.2   3838561   VKRenderThread       79.6         S   VKRenderThread     16
+1791509472.655    86.2   3838469       GlobPool/1       72.7         S            dota2      3
+1791509472.655    86.2   3838468       GlobPool/0       72.7         S            dota2      3
+1791509472.655    86.2   3838472       GlobPool/4       72.6         S            dota2      3
+1791509472.655    86.2   3838473       GlobPool/5       72.4         S            dota2      3
+1791509472.655    86.2   3838471       GlobPool/3       72.2         S            dota2      3
+1791509472.655    86.2   3838474       GlobPool/6       72.2         S            dota2      3
+1791509472.655    86.2   3838470       GlobPool/2       72.2         S            dota2      3
+1791509472.655    86.2   3838548   VKRenderThread       71.3         S   VKRenderThread      8
+1791509472.655    86.2   3839372  IPC:CSteamEngin       49.1         S          swapper     12
+1791509473.235    88.6   3839378  CJobMgr::m_Work      250.1         S          swapper     12
+1791509473.235    88.6   3839381  CHTTPCacheFileT      250.1         S          swapper     29
+1791509473.235    88.6   3839379  CHTTPClientThre      250.0         S          swapper      2
+1791509473.235    88.6   3839380  IPC:CSteamEngin      200.1         S          swapper     19
+1791509473.235    88.6   3838572            dota2      100.1         S          swapper      6
+1791509473.235    88.6   3838498            dota2      100.1         S          swapper      9
+1791509473.235    88.6   3838563   VKRenderThread       84.4         S   VKRenderThread      7
+1791509473.235    88.6   3838470       GlobPool/2       80.4         S            dota2     12
+1791509473.235    88.6   3838468       GlobPool/0       80.4         S            dota2     12
+1791509473.235    88.6   3838473       GlobPool/5       80.4         S            dota2     12
+1791509473.235    88.6   3838471       GlobPool/3       80.4         S            dota2     12
+1791509473.235    88.6   3838472       GlobPool/4       80.4         S            dota2     12
+1791509473.235    88.6   3838469       GlobPool/1       80.4         S            dota2     12
+1791509473.235    88.6   3838474       GlobPool/6       80.2         S            dota2     12
+1791509473.235    88.6   3838559   VKRenderThread       78.9         S            dota2     12
+1791509473.235    88.6   3838560   VKRenderThread       78.8         S            dota2     12
+1791509473.235    88.6   3838548   VKRenderThread       78.7         S            dota2     12
+1791509473.235    88.6   3838561   VKRenderThread       78.7         S            dota2     12
+1791509473.235    88.6   3838562   VKRenderThread       78.7         S            dota2     12
+1791509473.235    88.6   3838564   VKRenderThread       78.7         S            dota2     12
+1791509473.235    88.6   3839372  IPC:CSteamEngin       49.1         S          swapper      4
+1791509483.672  2021.9   3839376  SteamEngineWatc     5000.1         S          swapper     28
+1791509483.672  2021.9   3838559   VKRenderThread     2021.1         S   VKRenderThread     13
+1791509483.672  2021.9   3838562   VKRenderThread     2020.8         S   VKRenderThread     13
+1791509483.672  2021.9   3838560   VKRenderThread     2020.8         S   VKRenderThread     13
+1791509483.672  2021.9   3838565   VKRenderThread     2020.8         S   VKRenderThread     13
+1791509483.672  2021.9   3838563   VKRenderThread     2020.7         S   VKRenderThread     13
+1791509483.672  2021.9   3838564   VKRenderThread     2020.7         S   VKRenderThread     13
+1791509483.672  2021.9   3838561   VKRenderThread     2019.8         S   VKRenderThread     13
+1791509483.672  2021.9   3838548   VKRenderThread     2018.6         S            dota2     12
+1791509483.672  2021.9   3838469       GlobPool/1     2017.2         S       GlobPool/5      0
+1791509483.672  2021.9   3838471       GlobPool/3     2017.2         S       GlobPool/5      0
+1791509483.672  2021.9   3838470       GlobPool/2     2017.2         S       GlobPool/5      0
+1791509483.672  2021.9   3838474       GlobPool/6     2017.2         S       GlobPool/5      0
+1791509483.672  2021.9   3838472       GlobPool/4     2017.1         S            dota2     12
+1791509483.672  2021.9   3838473       GlobPool/5     2017.1         S            dota2     12
+1791509483.672  2021.9   3838506            dota2     2000.1         S          swapper     12
+1791509487.305  2957.8   3838565   VKRenderThread     2951.1         S   VKRenderThread     10
+1791509487.305  2957.8   3838561   VKRenderThread     2951.0         S   VKRenderThread     10
+1791509487.305  2957.8   3838559   VKRenderThread     2951.0         S   VKRenderThread     10
+1791509487.305  2957.8   3838564   VKRenderThread     2951.0         S   VKRenderThread     10
+1791509487.305  2957.8   3838560   VKRenderThread     2951.0         S   VKRenderThread     10
+1791509487.305  2957.8   3838562   VKRenderThread     2951.0         S   VKRenderThread     10
+1791509487.305  2957.8   3838563   VKRenderThread     2951.0         S   VKRenderThread     10
+1791509487.305  2957.8   3838548   VKRenderThread     2950.6         S       GlobPool/5     30
+1791509487.305  2957.8   3838471       GlobPool/3     2950.5         S       GlobPool/5     30
+1791509487.305  2957.8   3838472       GlobPool/4     2950.5         S       GlobPool/5     30
+1791509487.305  2957.8   3838468       GlobPool/0     2950.3         S            dota2     26
+1791509487.305  2957.8   3838470       GlobPool/2     2950.1         S            dota2     26
+1791509487.305  2957.8   3838469       GlobPool/1     2949.9         S       GlobPool/5     26
+1791509487.305  2957.8   3838473       GlobPool/5     2949.8         S       GlobPool/6      0
+1791509487.305  2957.8   3838506            dota2     2000.1         S          swapper     12
+1791509492.657  1579.7   3838506            dota2     2000.1         S       Compositor     12
+1791509492.657  1579.7   3838562   VKRenderThread     1582.8         S   VKRenderThread      8
+1791509492.657  1579.7   3838470       GlobPool/2     1574.7         S            dota2     30
+1791509492.657  1579.7   3838472       GlobPool/4     1574.7         S            dota2     30
+1791509492.657  1579.7   3838469       GlobPool/1     1574.7         S            dota2     30
+1791509492.657  1579.7   3838473       GlobPool/5     1574.7         S            dota2     30
+1791509492.657  1579.7   3838474       GlobPool/6     1574.7         S            dota2     30
+1791509492.657  1579.7   3838468       GlobPool/0     1574.7         S            dota2     30
+1791509492.657  1579.7   3838471       GlobPool/3     1574.6         S            dota2     30
+1791509492.657  1579.7   3838548   VKRenderThread     1572.7         S            dota2      0
+1791509492.657  1579.7   3838561   VKRenderThread     1572.7         S            dota2      0
+1791509492.657  1579.7   3838559   VKRenderThread     1572.7         S            dota2      0
+1791509492.657  1579.7   3838563   VKRenderThread     1572.7         S            dota2      0
+1791509492.657  1579.7   3838564   VKRenderThread     1572.7         S            dota2      0
+1791509492.657  1579.7   3838560   VKRenderThread     1571.1         S            dota2      0
+1791509501.458   233.5   3838569  mangohud-hwinfo      504.1         S   VKRenderThread      7
+1791509501.458   233.5   3839381  CHTTPCacheFileT      250.1         S          swapper     12
+1791509501.458   233.5   3839379  CHTTPClientThre      250.1         S          swapper      7
+1791509501.458   233.5   3839378  CJobMgr::m_Work      250.1         S          swapper     24
+1791509501.458   233.5   3839392  CJobMgr::m_Work      250.1         S          swapper     13
+1791509501.458   233.5   3838562   VKRenderThread      224.8         S   VKRenderThread      1
+1791509501.458   233.5   3838563   VKRenderThread      224.8         S   VKRenderThread      1
+1791509501.458   233.5   3838560   VKRenderThread      224.8         S   VKRenderThread      1
+1791509501.458   233.5   3838561   VKRenderThread      224.8         S   VKRenderThread      1
+1791509501.458   233.5   3838565   VKRenderThread      224.8         S   VKRenderThread      1
+1791509501.458   233.5   3838559   VKRenderThread      224.8         S   VKRenderThread      1
+1791509501.458   233.5   3838564   VKRenderThread      224.8         S   VKRenderThread      1
+1791509501.458   233.5   3838548   VKRenderThread      224.4         S       GlobPool/0     22
+1791509501.458   233.5   3838470       GlobPool/2      224.4         S            dota2      0
+1791509501.458   233.5   3838473       GlobPool/5      224.3         S       GlobPool/0     22
+1791509501.458   233.5   3838471       GlobPool/3      224.2         S       GlobPool/0     22
+1791509501.458   233.5   3838474       GlobPool/6      224.2         S            dota2      4
+1791509501.458   233.5   3838472       GlobPool/4      224.1         S            dota2      0
+1791509501.458   233.5   3838469       GlobPool/1      223.9         S       GlobPool/0     22
+1791509501.458   233.5   3839380  IPC:CSteamEngin      200.1         S          swapper     18
+1791509507.334  1001.6   3838506            dota2     2000.1         S          swapper     24
+1791509507.334  1001.6   3838561   VKRenderThread      998.9         S   VKRenderThread      2
+1791509507.334  1001.6   3838565   VKRenderThread      998.4         S   VKRenderThread      2
+1791509507.334  1001.6   3838564   VKRenderThread      998.4         S   VKRenderThread      2
+1791509507.334  1001.6   3838560   VKRenderThread      998.3         S   VKRenderThread      2
+1791509507.334  1001.6   3838563   VKRenderThread      998.3         S   VKRenderThread      2
+1791509507.334  1001.6   3838562   VKRenderThread      997.3         S   VKRenderThread      2
+1791509507.334  1001.6   3838469       GlobPool/1      788.5         S            dota2     26
+1791509507.334  1001.6   3838473       GlobPool/5      788.5         S            dota2     26
+1791509507.334  1001.6   3838472       GlobPool/4      788.5         S            dota2     26
+1791509507.334  1001.6   3838470       GlobPool/2      788.5         S            dota2     26
+1791509507.334  1001.6   3838471       GlobPool/3      788.3         S            dota2     26
+1791509507.334  1001.6   3838468       GlobPool/0      564.8         S            dota2     26
+1791509507.334  1001.6   3838474       GlobPool/6      564.8         S            dota2     26
+1791509507.334  1001.6   3838548   VKRenderThread      557.7         S   VKRenderThread      4
+1791509507.334  1001.6   3838569  mangohud-hwinfo      503.1         S   VKRenderThread      3
+1791509523.690   519.6   3838564   VKRenderThread      518.5         S   VKRenderThread     22
+1791509523.690   519.6   3838560   VKRenderThread      518.1         S   VKRenderThread     22
+1791509523.690   519.6   3838565   VKRenderThread      518.1         S   VKRenderThread     22
+1791509523.690   519.6   3838559   VKRenderThread      518.1         S   VKRenderThread     22
+1791509523.690   519.6   3838563   VKRenderThread      518.0         S   VKRenderThread     22
+1791509523.690   519.6   3838562   VKRenderThread      518.0         S   VKRenderThread     22
+1791509523.690   519.6   3838561   VKRenderThread      517.2         S   VKRenderThread     22
+1791509523.690   519.6   3838548   VKRenderThread      515.8         S            dota2      4
+1791509523.690   519.6   3838474       GlobPool/6      512.1         S       GlobPool/2     31
+1791509523.690   519.6   3838473       GlobPool/5      512.0         S       GlobPool/4     10
+1791509523.690   519.6   3838471       GlobPool/3      512.0         S       GlobPool/4     10
+1791509523.690   519.6   3838469       GlobPool/1      512.0         S       GlobPool/4     10
+1791509523.690   519.6   3838468       GlobPool/0      511.9         S            dota2      4
+1791509523.690   519.6   3838472       GlobPool/4      511.9         S            dota2      4
+1791509523.690   519.6   3838569  mangohud-hwinfo      505.1         S   VKRenderThread     18
+1791509526.137   905.5   3838569  mangohud-hwinfo      935.2         S   VKRenderThread      6
+1791509526.137   905.5   3838564   VKRenderThread      902.8         S   VKRenderThread      6
+1791509526.137   905.5   3838562   VKRenderThread      902.4         S   VKRenderThread      6
+1791509526.137   905.5   3838560   VKRenderThread      902.4         S   VKRenderThread      6
+1791509526.137   905.5   3838561   VKRenderThread      902.4         S   VKRenderThread      6
+1791509526.137   905.5   3838563   VKRenderThread      902.3         S   VKRenderThread      6
+1791509526.137   905.5   3838565   VKRenderThread      901.6         S   VKRenderThread      6
+1791509526.137   905.5   3838468       GlobPool/0      693.2         S            dota2      3
+1791509526.137   905.5   3838471       GlobPool/3      693.2         S            dota2      3
+1791509526.137   905.5   3838469       GlobPool/1      693.1         S            dota2      3
+1791509526.137   905.5   3838474       GlobPool/6      693.1         S            dota2      3
+1791509526.137   905.5   3838472       GlobPool/4      693.1         S            dota2      3
+1791509526.137   905.5   3838470       GlobPool/2      470.9         S            dota2      3
+1791509526.137   905.5   3838473       GlobPool/5      470.9         S            dota2      3
+1791509526.137   905.5   3838548   VKRenderThread      463.4         S   VKRenderThread     11
+```
+
+## All blocked dota threads during hitches (sum of block time)
+```
+             dota2 tid=3838506   blocked_total=   12.00s  hitches=6
+    VKRenderThread tid=3838562   blocked_total=    9.86s  hitches=11
+    VKRenderThread tid=3838563   blocked_total=    9.86s  hitches=11
+    VKRenderThread tid=3838561   blocked_total=    9.85s  hitches=11
+    VKRenderThread tid=3838560   blocked_total=    9.77s  hitches=10
+    VKRenderThread tid=3838564   blocked_total=    9.54s  hitches=10
+        GlobPool/3 tid=3838471   blocked_total=    9.31s  hitches=11
+        GlobPool/1 tid=3838469   blocked_total=    9.31s  hitches=11
+        GlobPool/4 tid=3838472   blocked_total=    9.31s  hitches=11
+        GlobPool/5 tid=3838473   blocked_total=    9.08s  hitches=11
+    VKRenderThread tid=3838548   blocked_total=    8.85s  hitches=11
+        GlobPool/2 tid=3838470   blocked_total=    8.57s  hitches=10
+    VKRenderThread tid=3838565   blocked_total=    8.20s  hitches=9
+             dota2 tid=3838464   blocked_total=    8.05s  hitches=9
+    VKRenderThread tid=3838559   blocked_total=    7.95s  hitches=9
+        GlobPool/0 tid=3838468   blocked_total=    6.65s  hitches=8
+        GlobPool/6 tid=3838474   blocked_total=    6.13s  hitches=10
+   SteamEngineWatc tid=3839376   blocked_total=    5.00s  hitches=1
+   mangohud-hwinfo tid=3838569   blocked_total=    4.46s  hitches=8
+   CJobMgr::m_Work tid=3839378   blocked_total=    2.75s  hitches=11
+```
+
+## Per-hitch CPU picture (first 12)
+```
+     hitch_t   ft_ms  idle% cpu0idle%       cpu0_top busy_cpu           top_task main_block
+-------------------------------------------------------------------------------------------
+1791509470.950   317.8   91.1       9.6 VKRenderThread        0         Compositor          -
+1791509472.399   201.3   91.9      16.3     GlobPool/0        0         Compositor      195ms
+1791509472.655    86.2   89.5      51.5 VKRenderThread        0         Compositor          -
+1791509473.235    88.6   90.8      35.6 VKRenderThread        0         Compositor       79ms
+1791509483.672  2021.9   92.7       2.3     GlobPool/0        0         GlobPool/0     2017ms
+1791509487.305  2957.8   92.9       1.0     GlobPool/6        0         GlobPool/6     2951ms
+1791509492.657  1579.7   92.8       2.5 VKRenderThread        0     VKRenderThread     1573ms
+1791509501.458   233.5   91.9      17.9     GlobPool/0        0         Compositor      225ms
+1791509507.334  1001.6   92.8       4.6 VKRenderThread        0     VKRenderThread      250ms
+1791509523.690   519.6   91.7       6.0     GlobPool/2        0         GlobPool/2      512ms
+1791509526.137   905.5   92.8       5.0 VKRenderThread        0     VKRenderThread      250ms
+```
+
+## cpu0 activity (mean seconds per window; hitch vs control)
+```
+comm                           hitch_s    ctrl_s   ratio
+VKRenderThread                  0.3364    0.0635    5.30
+GlobPool/6                      0.2649    0.0358    7.39
+GlobPool/0                      0.2090    0.0206   10.17
+GlobPool/2                      0.0430    0.0219    1.96
+Compositor                      0.0056    0.0940    0.06
+dota2                           0.0013    0.0320    0.04
+desktop-app-1                   0.0009    0.0139    0.06
+GlobPool/3                      0.0006    0.0062    0.10
+GlobPool/4                      0.0004    0.0168    0.03
+GlobPool/1                      0.0002    0.0071    0.03
+mangohud-nvidia                 0.0002    0.0050    0.04
+GlobPool/5                      0.0001    0.0069    0.02
+(cpu0 idle)                     0.1384    0.6300
+```
+
+## Wakers that end the main-thread stall (count over hitches)
+```
+VKRenderThread                       2
+GlobPool/0                           2
+swapper                              2
+GlobPool/3                           1
+GlobPool/5                           1
+GlobPool/2                           1
+```
+
+## Enriched tasks during hitches (wall-normalised share, hitch - control)
+```
+comm                             hitch%    ctrl%   delta%   ratio
+swapper/1                         2.950    2.483   +0.467    1.19
+swapper/14                        2.819    2.470   +0.349    1.14
+swapper/12                        2.861    2.539   +0.321    1.13
+swapper/6                         2.915    2.613   +0.302    1.12
+GlobPool/0                        0.797    0.502   +0.295    1.59
+swapper/4                         2.821    2.546   +0.275    1.11
+swapper/15                        2.900    2.625   +0.274    1.10
+swapper/5                         3.065    2.797   +0.268    1.10
+swapper/2                         2.543    2.285   +0.259    1.11
+swapper/10                        2.996    2.745   +0.250    1.09
+swapper/13                        2.986    2.749   +0.238    1.09
+swapper/8                         2.989    2.754   +0.236    1.09
+swapper/3                         2.618    2.458   +0.160    1.07
+swapper/26                        2.951    2.828   +0.123    1.04
+swapper/7                         3.003    2.887   +0.116    1.04
+VKRenderThread                    1.621    1.508   +0.113    1.07
+swapper/28                        2.967    2.873   +0.094    1.03
+swapper/24                        2.963    2.870   +0.093    1.03
+swapper/18                        2.940    2.848   +0.092    1.03
+swapper/16                        2.983    2.902   +0.081    1.03
+```
+
+## Aggregate (hitch vs control)
+* cpu idle fraction      : hitch 91.89%   control 88.99%
+* main-thread blocked    : hitch 731.8ms/window   control 61.40% of window
+* render-thread blocked  : hitch 882.8ms/window   control 93.93% of window
+
+## Periodicity
+* hitch occurrence:
+    - n: 11
+    - interval_median_s: 4.492349028587341
+    - interval_mean_s: 5.518735194206238
+    - interval_min_s: 0.25609517097473145
+    - interval_max_s: 16.355658531188965
+    - ac_peak_period_s: 16.35
+    - ac_peak_value: 0.25150090383393214
+* main-thread stall-end times:
+    - n: 10
+    - interval_median_s: 5.352564999993774
+    - interval_mean_s: 5.947542555555831
+    - interval_min_s: 0.15907400001015048
+    - interval_max_s: 16.659646000000066
+    - ac_peak_period_s: 19.700000000000003
+    - ac_peak_value: 0.1512217091258908
+
+## Boundary events (switch-ins within +-10 ms of hitch start)
+```
+comm                            hits      exp   lift    events
+HeapHelper                        87     23.4    3.7     10652
+nvidia-powerd                    191    142.6    1.3     64836
+user-daemon-1                     33     25.1    1.3     11425
+user-app-1                        34     26.6    1.3     12098
+data-loop.0                      129    123.9    1.0     56326
+rcu_preempt                       18     13.4    1.3      6093
+system-daemon-1                    7      2.7    2.6      1214
+steam                             16     13.0    1.2      5929
+CJobMgr::m_Work                   12      9.1    1.3      4119
+PulseMainloop                     45     42.3    1.1     19224
+kworker/u130:3                     3      0.6    4.9       279
+pipewire-pulse                    66     63.7    1.0     28940
+libuv-worker                     146    144.1    1.0     65486
+display_recheck                    4      2.2    1.8      1008
+steamwebhelper                    17     15.2    1.1      6922
+user-daemon-2                      4      2.3    1.7      1052
+user-app-2                         8      6.4    1.2      2919
+browser                            2      0.7    3.0       304
+CacheThread_Blo                    1      0.0   35.0        13
+ksoftirqd/2                        1      0.1    7.8        58
+PulseHotplug                      22     21.2    1.0      9615
+CGamepadAPITask                    1      0.2    6.4        71
+psimon                             1      0.2    5.2        87
+gmain                              1      0.2    4.3       106
+JITWorker                          1      0.3    3.8       120
+```
+
+## Boundary events (switch-ins within +-10 ms of main-thread stall end)
+```
+comm                            hits      exp   lift    events
+swapper/31                       115     49.3    2.3     24631
+nvidia-powerd                    195    129.7    1.5     64836
+Compositor                       105     91.7    1.1     45845
+steam                             20     11.9    1.7      5929
+user-app-1                        32     24.2    1.3     12098
+Chrome_IOThread                   19     11.2    1.7      5620
+migration/0                       13      6.6    2.0      3302
+user-app-2                        12      5.8    2.1      2919
+swapper/6                        295    289.3    1.0    144649
+mangohud-hwinfo                    6      0.4   13.8       218
+Chrome_ChildIOT                   55     49.5    1.1     24743
+migration/18                      13      7.8    1.7      3890
+MemoryInfra                        5      0.0  125.0        20
+IPC:CSteamEngin                   21     17.2    1.2      8622
+system-daemon-2                   17     14.1    1.2      7035
+node-V8Worker                      4      1.1    3.6       561
+system-daemon-1                    5      2.4    2.1      1214
+swapper/27                        40     37.6    1.1     18826
+migration/27                       3      0.9    3.3       458
+gmain                              2      0.2    9.4       106
+kworker/5:0                        2      0.2    8.3       120
+kworker/1:0                        2      0.3    7.5       134
+kworker/8:2                        2      0.3    5.7       175
+kworker/u130:10                    2      0.5    3.7       271
+CHTTPCacheFileT                    3      1.6    1.9       804
+```

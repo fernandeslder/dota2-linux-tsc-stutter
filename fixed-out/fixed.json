@@ -1,0 +1,104 @@
+{
+  "passed": false,
+  "provisional": false,
+  "note": "Derived from 7 untouched live-spectate baseline runs (docs/FIXED-DEFINITION.md): 17-55 hitches/min, worst 1.7-3.3 s, 0.1% low 0.8-1.6 fps; vs fixed runs 1.8-3.0 hitches/min, worst <=33 ms, 0.1% low 46-54 fps.",
+  "n_runs": 3,
+  "checks": [
+    {
+      "criterion": "min_consecutive_runs",
+      "passed": true,
+      "details": {
+        "have": 3,
+        "need": 3
+      }
+    },
+    {
+      "criterion": "no_steady_periodic",
+      "passed": true,
+      "details": {
+        "offenders": [],
+        "max_period_s": 10.0,
+        "p_threshold": 0.01
+      }
+    },
+    {
+      "criterion": "fps_0p1pct_low_min",
+      "passed": false,
+      "details": {
+        "offenders": [
+          {
+            "run": "live-baseline-1",
+            "fps_0.1pct_low": 1.622116359552495
+          },
+          {
+            "run": "live-baseline-2",
+            "fps_0.1pct_low": 0.8135889649004321
+          },
+          {
+            "run": "live-baseline-3",
+            "fps_0.1pct_low": 0.8568058351904599
+          }
+        ],
+        "value": 30.0
+      }
+    },
+    {
+      "criterion": "min_run_duration_min",
+      "passed": true,
+      "details": {
+        "offenders": [],
+        "value": 5.0
+      }
+    },
+    {
+      "criterion": "hitches_per_min_max",
+      "passed": false,
+      "details": {
+        "offenders": [
+          {
+            "run": "live-baseline-1",
+            "per_min": 54.574696407055
+          },
+          {
+            "run": "live-baseline-2",
+            "per_min": 39.46064969851666
+          },
+          {
+            "run": "live-baseline-3",
+            "per_min": 39.28896591483449
+          }
+        ],
+        "value": 6.0
+      }
+    },
+    {
+      "criterion": "worst_hitch_ms_max",
+      "passed": false,
+      "details": {
+        "offenders": [
+          {
+            "run": "live-baseline-1",
+            "worst_ms": 1734.24
+          },
+          {
+            "run": "live-baseline-2",
+            "worst_ms": 2958.38
+          },
+          {
+            "run": "live-baseline-3",
+            "worst_ms": 3265.24
+          }
+        ],
+        "value": 100.0
+      }
+    },
+    {
+      "criterion": "longest_run_min",
+      "passed": false,
+      "details": {
+        "longest_min": 6.0067755540212,
+        "need": 15.0
+      }
+    }
+  ]
+}

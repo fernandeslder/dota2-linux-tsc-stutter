@@ -1,0 +1,12 @@
+t_epoch,label,detail
+1791509152.881989,run_start,label=S1-sched profile=min
+1791509152.978142,collectors_start,pid=3838300 profile=min
+1791509157.988917,game_detected,pid=3838464
+1791509242.510754,match_loaded,process=dota2 pids=[3838464] frames=11
+1791509262.511191,warmup_end,warmup_s=20.0
+1791509322.533215,heartbeat,frames=17791 elapsed_min=1.0
+1791509382.626092,heartbeat,frames=26125 elapsed_min=2.0
+1791509382.626171,window_end,minutes=2.0
+1791509382.626354,stop_requested,signal 15
+1791509382.636423,collectors_stop,pid=3838300
+1791509382.826587,window_end,collect stop

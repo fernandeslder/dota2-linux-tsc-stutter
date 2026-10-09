@@ -1,0 +1,15 @@
+t_epoch,label,detail
+1791504175.803936,run_start,label=A1-overlay-off profile=full
+1791504175.900776,collectors_start,pid=3747824 profile=full
+1791504180.946828,game_detected,pid=3748054
+1791504306.481224,match_loaded,process=dota2 pids=[3748054] frames=28
+1791504326.481577,warmup_end,warmup_s=20.0
+1791504386.943993,heartbeat,frames=16742 elapsed_min=1.0
+1791504446.951824,heartbeat,frames=22526 elapsed_min=2.0
+1791504506.962033,heartbeat,frames=28293 elapsed_min=3.0
+1791504567.453135,heartbeat,frames=34508 elapsed_min=4.0
+1791504627.923152,heartbeat,frames=40352 elapsed_min=5.0
+1791504686.860992,window_end,minutes=6.0
+1791504686.861229,stop_requested,signal 15
+1791504686.886304,collectors_stop,pid=3747824
+1791504687.061534,window_end,collect stop

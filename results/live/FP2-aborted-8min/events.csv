@@ -1,0 +1,19 @@
+t_epoch,label,detail
+1791517202.594257,run_start,label=FP2 profile=lite
+1791517202.697696,collectors_start,pid=3962394 profile=lite
+1791517202.702838,offcpu_start,mode=native hz=100.0 pid=0
+1791517207.721327,game_detected,pid=3962572
+1791517340.888302,match_loaded,process=dota2 pids=[3962572] frames=9
+1791517360.888704,warmup_end,warmup_s=20.0
+1791517420.923678,heartbeat,frames=20070 elapsed_min=1.0
+1791517481.034315,heartbeat,frames=26955 elapsed_min=2.0
+1791517541.159709,heartbeat,frames=33788 elapsed_min=3.0
+1791517601.289566,heartbeat,frames=40213 elapsed_min=4.0
+1791517661.382741,heartbeat,frames=47094 elapsed_min=5.0
+1791517721.540144,heartbeat,frames=53725 elapsed_min=6.0
+1791517781.619020,heartbeat,frames=60336 elapsed_min=7.0
+1791517841.698194,heartbeat,frames=62716 elapsed_min=8.0
+1791517863.006752,window_end,aborted: MangoHud frames stopped for >60s (last count 62716)
+1791517863.006963,stop_requested,signal 15
+1791517863.129547,collectors_stop,pid=3962394
+1791517863.207270,window_end,collect stop

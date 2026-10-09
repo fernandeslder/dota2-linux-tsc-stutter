@@ -1,0 +1,21 @@
+# Runs as ROOT at every boot and writes MSR 0x10 (see REPORT.md / README "Build and install (root-owned)").
+# Install this file and /usr/local/bin/tsc-resync as root:root; never from a user-writable location.
+# NOTE: this repo copy gained the light hardening below (NoNewPrivileges/ProtectHome/PrivateNetwork) after the
+# original install; the copy installed on the author's system (/etc/systemd/system/tsc-resync.service) was NOT changed.
+# Deliberately no ProtectSystem=strict / DeviceAllow: the tool needs /dev/cpu/*/msr.
+[Unit]
+Description=Re-align CPU0 TSC with the other CPUs (firmware leaves it ~2.95 s behind; stalls Source 2 games)
+After=systemd-modules-load.service
+Before=display-manager.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/tsc-resync 0 1
+RemainAfterExit=yes
+TimeoutStartSec=20
+NoNewPrivileges=yes
+ProtectHome=yes
+PrivateNetwork=yes
+
+[Install]
+WantedBy=multi-user.target

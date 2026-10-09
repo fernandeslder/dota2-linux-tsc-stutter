@@ -1,0 +1,30 @@
+t_epoch,label,detail
+1791519322.882551,run_start,label=FP2 profile=lite
+1791519322.984149,collectors_start,pid=3988019 profile=lite
+1791519322.988721,offcpu_start,mode=native hz=100.0 pid=0
+1791519328.006145,game_detected,pid=3988221
+1791519456.240980,match_loaded,process=dota2 pids=[3988221] frames=11
+1791519476.241311,warmup_end,warmup_s=20.0
+1791519536.287917,heartbeat,frames=20090 elapsed_min=1.0
+1791519596.389621,heartbeat,frames=27170 elapsed_min=2.0
+1791519656.567003,heartbeat,frames=33733 elapsed_min=3.0
+1791519716.663651,heartbeat,frames=40612 elapsed_min=4.0
+1791519776.733976,heartbeat,frames=47612 elapsed_min=5.0
+1791519836.874883,heartbeat,frames=54117 elapsed_min=6.0
+1791519897.018689,heartbeat,frames=60647 elapsed_min=7.0
+1791519957.135991,heartbeat,frames=63576 elapsed_min=8.0
+1791520017.261830,heartbeat,frames=63576 elapsed_min=9.0
+1791520077.418097,heartbeat,frames=63576 elapsed_min=10.0
+1791520137.593389,heartbeat,frames=63576 elapsed_min=11.0
+1791520197.853896,heartbeat,frames=63576 elapsed_min=12.0
+1791520258.189167,heartbeat,frames=63576 elapsed_min=13.0
+1791520318.363581,heartbeat,frames=63576 elapsed_min=14.0
+1791520378.567840,heartbeat,frames=63576 elapsed_min=15.0
+1791520438.808274,heartbeat,frames=63576 elapsed_min=16.0
+1791520498.949564,heartbeat,frames=63576 elapsed_min=17.0
+1791520559.124223,heartbeat,frames=63576 elapsed_min=18.0
+1791520619.371976,heartbeat,frames=63576 elapsed_min=19.1
+1791520676.359387,window_end,minutes=20.0
+1791520676.359703,stop_requested,signal 15
+1791520677.375691,collectors_stop,pid=3988019
+1791520677.561456,window_end,collect stop

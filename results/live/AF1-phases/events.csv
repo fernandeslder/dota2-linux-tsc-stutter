@@ -1,0 +1,28 @@
+t_epoch,label,detail
+1791514539.658816,run_start,label=AF1-phases profile=lite
+1791514539.764350,collectors_start,pid=3931944 profile=lite
+1791514539.770106,offcpu_start,mode=native hz=100.0 pid=0
+1791514544.788142,game_detected,pid=3932124
+1791514631.663003,match_loaded,process=dota2 pids=[3932124] frames=8
+1791514651.663460,warmup_end,warmup_s=20.0
+1791514653.326950,phase:all1,cpus=0-31
+1791514711.906470,heartbeat,frames=18731 elapsed_min=1.0
+1791514753.388573,phase:no0a,cpus=1-31
+1791514754.896822,collectors_pinned,cpus=[0] game_pid=3932124
+1791514772.192726,heartbeat,frames=27256 elapsed_min=2.0
+1791514832.469380,heartbeat,frames=35845 elapsed_min=3.0
+1791514853.455324,phase:no16a,"cpus=0-15,17-31"
+1791514892.734303,heartbeat,frames=43991 elapsed_min=4.0
+1791514953.003764,heartbeat,frames=52403 elapsed_min=5.0
+1791514953.518880,phase:all2,cpus=0-31
+1791515013.263435,heartbeat,frames=60361 elapsed_min=6.0
+1791515053.583479,phase:no0b,cpus=1-31
+1791515073.514399,heartbeat,frames=68253 elapsed_min=7.0
+1791515133.804017,heartbeat,frames=76845 elapsed_min=8.0
+1791515150.197446,window_end,aborted: MangoHud frames stopped for >10s (last count 77700)
+1791515150.197668,stop_requested,signal 15
+1791515150.258046,collectors_stop,pid=3931944
+1791515150.397934,window_end,collect stop
+1791515153.657982,phase:no16b,"cpus=0-15,17-31"
+1791515253.719984,phase:only0_16,"cpus=0,16"
+1791515353.782381,phase:end,
